@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConfigureImportExport.Pages.DatabaseSettings"
+             Title="DatabaseSettings">
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                Text="Enter Database Settings and Press Test Connection Before Saving"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+                <Label Grid.Column="0" Grid.Row="1" Text="Server Name" />
+                <Entry Grid.Column="1" Grid.Row="1" Text="{Binding ServerName}" Placeholder="Enter Text" />
+            </Grid>
+            <Button
+                x:Name="SaveButton"
+                Text="Save Changes" 
+                Clicked="OnSaveButtonClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

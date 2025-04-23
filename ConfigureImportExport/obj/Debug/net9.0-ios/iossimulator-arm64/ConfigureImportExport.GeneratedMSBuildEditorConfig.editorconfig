@@ -1,0 +1,93 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0-ios
+build_property.TargetFramework = net9.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ConfigureImportExport
+build_property.ProjectDir = C:\Users\robin.wilson\source\repos\ConfigureImportExport\ConfigureImportExport\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/Pages/About.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.Pages.About.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\About.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\About.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/Pages/DatabaseSettings.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.Pages.DatabaseSettings.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\DatabaseSettings.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\DatabaseSettings.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/Pages/ExportSettings.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.Pages.ExportSettings.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ExportSettings.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ExportSettings.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/Pages/FTPSettings.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.Pages.FTPSettings.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\FTPSettings.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\FTPSettings.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/Pages/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.Pages.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MainPage.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/Pages/Welcome.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.Pages.Welcome.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Welcome.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Welcome.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/robin.wilson/source/repos/ConfigureImportExport/ConfigureImportExport/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConfigureImportExport.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
