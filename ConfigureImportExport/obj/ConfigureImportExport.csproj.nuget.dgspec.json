@@ -129,6 +129,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.android-arm64",
+              "version": "[9.0.4, 9.0.4]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.android-x64",
+              "version": "[9.0.4, 9.0.4]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.Android": {
               "privateAssets": "all"
@@ -204,6 +214,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.iossimulator-x64",
+              "version": "[9.0.4, 9.0.4]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.iOS": {
               "privateAssets": "all"
@@ -280,6 +296,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.maccatalyst-x64",
+              "version": "[9.0.4, 9.0.4]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.MacCatalyst": {
               "privateAssets": "all"
@@ -373,13 +395,13 @@
         "android-x64": {
           "#import": []
         },
-        "iossimulator-arm64": {
+        "iossimulator-x64": {
           "#import": []
         },
-        "maccatalyst-arm64": {
+        "maccatalyst-x64": {
           "#import": []
         },
-        "win10-arm64": {
+        "win10-x64": {
           "#import": []
         }
       }
