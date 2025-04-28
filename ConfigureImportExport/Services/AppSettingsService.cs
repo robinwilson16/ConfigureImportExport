@@ -14,8 +14,9 @@ namespace DashboardApp.Services
 {
     public class AppSettingsService
     {
-        public AppSettings? _appSettings;
+        public AppSettingsModel? _appSettings;
         public string? CustomSettingsFileName;
+        public string? CustomSettingsFilePath;
 
         public AppSettingsService()
         {
@@ -26,27 +27,27 @@ namespace DashboardApp.Services
                 ReadCommentHandling = JsonCommentHandling.Skip
             };
 
-            string customSettingsFile = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, CustomSettingsFileName);
-            if (System.IO.File.Exists(customSettingsFile))
+            CustomSettingsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, CustomSettingsFileName);
+            if (System.IO.File.Exists(CustomSettingsFilePath))
             {
-                using FileStream inputStream = System.IO.File.OpenRead(customSettingsFile);
+                using FileStream inputStream = System.IO.File.OpenRead(CustomSettingsFilePath);
                 using StreamReader streamReader = new StreamReader(inputStream);
-                _appSettings = JsonSerializer.Deserialize<AppSettings?>(streamReader.ReadToEnd(), options);
-                Trace.WriteLine("Loaded settings from: " + customSettingsFile);
+                _appSettings = JsonSerializer.Deserialize<AppSettingsModel?>(streamReader.ReadToEnd(), options);
+                Trace.WriteLine("Loaded settings from: " + CustomSettingsFilePath);
                 return;
             }
             else
             {
-                _appSettings = new AppSettings();
+                _appSettings = new AppSettingsModel();
             }
         }
         
-        public AppSettings? Get()
+        public AppSettingsModel? Get()
         {
             return _appSettings;
         }
 
-        public async Task<AppSettings>? Set()
+        public async Task<AppSettingsModel>? Set()
         {
             
             //_appSettings.Version = "1.0.1";
@@ -56,16 +57,16 @@ namespace DashboardApp.Services
                 WriteIndented = true
             };
 
-            string customSettingsFile = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, CustomSettingsFileName);
-            using FileStream outputStream = System.IO.File.OpenWrite(customSettingsFile);
+            CustomSettingsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, CustomSettingsFileName);
+            using FileStream outputStream = System.IO.File.OpenWrite(CustomSettingsFilePath);
             using StreamWriter streamWriter = new StreamWriter(outputStream);
             await streamWriter.WriteAsync(JsonSerializer.Serialize(_appSettings, options));
-            Trace.WriteLine("Saved settings file to: " + customSettingsFile);
+            Trace.WriteLine("Saved settings file to: " + CustomSettingsFilePath);
 
             return _appSettings;
         }
 
-        public async Task<AppSettings>? Set(AppSettings appSettings)
+        public async Task<AppSettingsModel>? Set(AppSettingsModel appSettings)
         {
 
             //_appSettings.Version = "1.0.1";
@@ -75,13 +76,19 @@ namespace DashboardApp.Services
                 WriteIndented = true
             };
 
-            string customSettingsFile = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, CustomSettingsFileName);
-            using FileStream outputStream = System.IO.File.OpenWrite(customSettingsFile);
+            CustomSettingsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, CustomSettingsFileName);
+            using FileStream outputStream = System.IO.File.OpenWrite(CustomSettingsFilePath);
             using StreamWriter streamWriter = new StreamWriter(outputStream);
             await streamWriter.WriteAsync(JsonSerializer.Serialize(appSettings, options));
-            Trace.WriteLine("Saved settings file to: " + customSettingsFile);
+            Trace.WriteLine("Saved settings file to: " + CustomSettingsFilePath);
+            System.Diagnostics.Debug.WriteLine("Saved settings file to: " + CustomSettingsFilePath);
 
             return appSettings;
+        }
+
+        public string? GetFilePath()
+        {
+            return CustomSettingsFilePath;
         }
     }
 }

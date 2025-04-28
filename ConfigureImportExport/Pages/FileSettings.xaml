@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConfigureImportExport.Pages.FileSettings"
+             Title="File Settings"
+             Shell.NavBarIsVisible="False"
+             xmlns:local="clr-namespace:ConfigureImportExport.Pages">
+    <Grid RowDefinitions="*,Auto">
+        <ScrollView
+            Grid.Row="0">
+            <VerticalStackLayout>
+                <Grid 
+                RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                ColumnDefinitions="Auto,*"
+                ColumnSpacing="10"
+                RowSpacing="10"
+                Margin="10"
+                Padding="10">
+                    <Label 
+                    Grid.Row="0" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2"
+                    Text="File Settings"
+                    FontSize="Title"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                    <Label 
+                    Grid.Row="1" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2"
+                    Text="Specify details of where to save the file to on the local computer"
+                    FontSize="Body"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                    <BoxView 
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,0,0,20"
+                    HeightRequest="1" />
+
+                    <Label 
+                    Grid.Row="3" 
+                    Grid.Column="0" 
+                    Text="Folder on Local Computer"
+                    FontSize="Body" />
+                    <Entry 
+                    Grid.Row="3" 
+                    Grid.Column="1" 
+                    Text="{Binding ExcelFile.Folder}"
+                    Placeholder="e.g. C:\\ExportFolder" />
+
+                    <Label 
+                        Grid.Row="4" 
+                        Grid.Column="0" 
+                        Text="File Name"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="4" 
+                        Grid.Column="1" 
+                        Text="{Binding ExcelFile.FileName}"
+                        Placeholder="e.g. ExportedFile.xlsx" />
+
+                    <Label 
+                    Grid.Row="5" 
+                    Grid.Column="0" 
+                    Text="Sheet Name"
+                    FontSize="Body" />
+
+                    <VerticalStackLayout
+                    Grid.Row="5" 
+                    Grid.Column="1">
+
+                        <Entry 
+                        Text="{Binding ExcelFile.SheetName}" 
+                        Placeholder="e.g. Sheet1" />
+                        <Label 
+                        Text="Optional and will default to Sheet1 if not specified"
+                        FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                    Grid.Row="6" 
+                    Grid.Column="0" 
+                    Text="Column Name as File Name"
+                    FontSize="Body" />
+
+                    <VerticalStackLayout
+                    Grid.Row="6" 
+                    Grid.Column="1">
+
+                        <Entry 
+                            Text="{Binding ExcelFile.ColumnNameAsFileName}" 
+                            Placeholder="e.g. Column1" />
+                        <Label 
+                        Text="Optional and will default to the first value from a specific column column in the file if specified and this column will then be excluded from the file"
+                        FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                    Grid.Row="7" 
+                    Grid.Column="0" 
+                    Text="Date Format"
+                    FontSize="Body" />
+                    <Entry 
+                    Grid.Row="7" 
+                    Grid.Column="1" 
+                    Text="{Binding ExcelFile.DateFormat}" 
+                    Placeholder="e.g. dd/MM/yyyy;@" />
+
+                    <Label 
+                    Grid.Row="8" 
+                    Grid.Column="0" 
+                    Text="Time Format"
+                    FontSize="Body" />
+                    <Entry 
+                    Grid.Row="8" 
+                    Grid.Column="1" 
+                    Text="{Binding ExcelFile.TimeFormat}"
+                    Placeholder="e.g. HH:mm:ss;@" />
+
+                    <Label 
+                        Grid.Row="9" 
+                        Grid.Column="0" 
+                        Text="Currency Format"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="9" 
+                        Grid.Column="1" 
+                        Text="{Binding ExcelFile.CurrencyFormat}"
+                        Placeholder="e.g. £#,##0" />
+
+                    <FlexLayout
+                    Grid.Row="10" 
+                    Grid.Column="1" 
+                    Wrap="Wrap"
+                    Direction="Row">
+                        <HorizontalStackLayout
+                        Spacing="5"
+                        Padding="0,5,5,5">
+                            <Button 
+                            x:Name="TestButton"
+                            Text="Test Settings" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                        Spacing="5"
+                        Padding="5">
+                            <Button 
+                            x:Name="SaveButton"
+                            Text="Save Changes" 
+                            Clicked="OnSaveButtonClicked"
+                            ImageSource="floppy.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                        Spacing="5"
+                        Padding="5">
+                            <Button 
+                            x:Name="CancelButton"
+                            Text="Cancel" />
+                        </HorizontalStackLayout>
+                    </FlexLayout>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <local:FooterPartial
+            Grid.Row="1"/>
+    </Grid>
+</ContentPage>

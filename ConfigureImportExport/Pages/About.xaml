@@ -2,11 +2,58 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ConfigureImportExport.Pages.About"
-             Title="About">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="About"
+             Shell.NavBarIsVisible="False"
+             xmlns:local="clr-namespace:ConfigureImportExport.Pages">
+    <Grid RowDefinitions="*,Auto">
+        <ScrollView
+            Grid.Row="0">
+            <VerticalStackLayout>
+                <Grid 
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                    ColumnDefinitions="*"
+                    ColumnSpacing="10"
+                    RowSpacing="10"
+                    Margin="10"
+                    Padding="10">
+                    <Label 
+                        Grid.Row="0" 
+                        Grid.Column="0" 
+                        Text="Configuration Tool for File Export Tools"
+                        FontSize="Title"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                    <Label 
+                        Grid.Row="1" 
+                        Grid.Column="0" 
+                        Text="Developed by Robin Wilson @ Further Education Partnership"
+                        FontSize="Subtitle"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                    <Label 
+                        Grid.Row="2" 
+                        Grid.Column="0" 
+                        Text="Cick on the tabs above to switch between the different sections and enter information. Test after entry to make sure values were entered correctly."
+                        FontSize="Body"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                    <BoxView 
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="0,0,0,20"
+                        HeightRequest="1" />
+
+                    <Label 
+                        Grid.Row="4" 
+                        Grid.Column="0" 
+                        Text="Copyright © Robin Wilson @ Further Education Partnership (FEP)"
+                        FontSize="Body" />
+
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <local:FooterPartial
+            Grid.Row="1"/>
+    </Grid>
 </ContentPage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConfigureImportExport.Pages.FooterPartial">
+    <Grid 
+        BackgroundColor="#213173"
+        ColumnDefinitions="Auto,*"
+        Margin="0"
+        Padding="10">
+        <Label
+            x:Name="AppSettingsDetails"
+            Grid.Column="0"
+            Text="Path of appsettings.json file"
+            TextColor="#FFFFFF"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label
+            x:Name="Version"
+            Grid.Column="1"
+            Text="Version 1.0.0"
+            TextColor="#FFFFFF"
+            VerticalOptions="Center" 
+            HorizontalOptions="End" />
+    </Grid>
+</ContentView>

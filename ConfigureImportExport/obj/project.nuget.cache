@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8dIzpfooBMA=",
+  "dgSpecHash": "sgsryOwmkOA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\ConfigureImportExport.csproj",
+  "projectFilePath": "C:\\ConfigureImportExport\\ConfigureImportExport\\ConfigureImportExport.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\robin.wilson\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\robin.wilson\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -229,10 +229,6 @@
     "C:\\Users\\robin.wilson\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.9.0.2\\xamarin.kotlinx.coroutines.core.jvm.1.9.0.2.nupkg.sha512",
     "C:\\Users\\robin.wilson\\.nuget\\packages\\xamarin.kotlinx.serialization.core\\1.7.3.2\\xamarin.kotlinx.serialization.core.1.7.3.2.nupkg.sha512",
     "C:\\Users\\robin.wilson\\.nuget\\packages\\xamarin.kotlinx.serialization.core.jvm\\1.7.3.2\\xamarin.kotlinx.serialization.core.jvm.1.7.3.2.nupkg.sha512",
-    "C:\\Users\\robin.wilson\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-x64\\9.0.4\\microsoft.netcore.app.runtime.mono.android-x64.9.0.4.nupkg.sha512",
-    "C:\\Users\\robin.wilson\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-arm64\\9.0.4\\microsoft.netcore.app.runtime.mono.android-arm64.9.0.4.nupkg.sha512",
-    "C:\\Users\\robin.wilson\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.iossimulator-x64\\9.0.4\\microsoft.netcore.app.runtime.mono.iossimulator-x64.9.0.4.nupkg.sha512",
-    "C:\\Users\\robin.wilson\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.maccatalyst-x64\\9.0.4\\microsoft.netcore.app.runtime.mono.maccatalyst-x64.9.0.4.nupkg.sha512",
     "C:\\Users\\robin.wilson\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512"
   ],
   "logs": []

@@ -12,6 +12,13 @@ namespace ConfigureImportExport
             InitializeComponent();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            
+            //Code here
+        }
+
         private async void OnCounterClicked(object sender, EventArgs e)
         {
             count++;
@@ -23,9 +30,11 @@ namespace ConfigureImportExport
 
             //Test function to save a config value
             AppSettingsService appSettingsService = new AppSettingsService();
-            AppSettings? appSettings = await appSettingsService.Set();
+            AppSettingsModel? appSettings = await appSettingsService.Set();
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+
+            System.Diagnostics.Debug.WriteLine("Clicked " + count + " times");
         }
     }
 

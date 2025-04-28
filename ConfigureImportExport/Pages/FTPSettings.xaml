@@ -2,11 +2,204 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ConfigureImportExport.Pages.FTPSettings"
-             Title="FTPSettings">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="FTP Settings"
+             Shell.NavBarIsVisible="False"
+             xmlns:local="clr-namespace:ConfigureImportExport.Pages">
+    <Grid RowDefinitions="*,Auto">
+        <ScrollView
+            Grid.Row="0">
+            <VerticalStackLayout>
+                <Grid 
+                RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                ColumnDefinitions="Auto,*"
+                ColumnSpacing="10"
+                RowSpacing="10"
+                Margin="10"
+                Padding="10">
+                    <Label 
+                        Grid.Row="0" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        Text="FTP Settings"
+                        FontSize="Title"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                    <Label 
+                        Grid.Row="1" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        Text="Specify the FTP settings below confirming where to upload the file to and press Test Settings before saving"
+                        FontSize="Body"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                    <BoxView 
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Margin="0,0,0,20"
+                        HeightRequest="1" />
+
+                    <Label 
+                        Grid.Row="3" 
+                        Grid.Column="0" 
+                        Text="Upload File"
+                        FontSize="Body" />
+
+                    <VerticalStackLayout
+                        Grid.Row="3" 
+                        Grid.Column="1">
+
+                        <CheckBox
+                            IsChecked="{Binding FTPConnection.UploadFile}" />
+                        <Label 
+                            Text="If not ticked then the file will only be generated locally and not uploaded to the FTP. May be useful for inital testing or you may not need to upload the generated file anywhere external."
+                            FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                        Grid.Row="4" 
+                        Grid.Column="0" 
+                        Text="FTP Server"
+                        FontSize="Body" />
+
+                    <VerticalStackLayout
+                        Grid.Row="4" 
+                        Grid.Column="1">
+
+                        <Entry 
+                            Text="{Binding FTPConnection.Server}" 
+                            Placeholder="e.g. CloudServer1" />
+                        <Label 
+                            Text="Usually an external server that you need to export data to"
+                            FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                        Grid.Row="5" 
+                        Grid.Column="0" 
+                        Text="Type"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="5" 
+                        Grid.Column="1" 
+                        Text="{Binding FTPConnection.Type}" 
+                        Placeholder="e.g. dbexportuser" />
+
+                    <Label 
+                        Grid.Row="6" 
+                        Grid.Column="0" 
+                        Text="Port"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="6" 
+                        Grid.Column="1" 
+                        Text="{Binding FTPConnection.Port}"
+                        Placeholder="e.g. 21" />
+
+                    <Label 
+                        Grid.Row="7" 
+                        Grid.Column="0" 
+                        Text="Mode"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="7" 
+                        Grid.Column="1" 
+                        Text="{Binding FTPConnection.Mode}"
+                        Placeholder="e.g. Passive" />
+
+                    <Label 
+                        Grid.Row="8" 
+                        Grid.Column="0" 
+                        Text="FTP Username"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="8" 
+                        Grid.Column="1" 
+                        Text="{Binding FTPConnection.Username}"
+                        Placeholder="e.g. ftpuser1" />
+
+                    <Label 
+                        Grid.Row="9" 
+                        Grid.Column="0" 
+                        Text="FTP Password"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="9" 
+                        Grid.Column="1" 
+                        IsPassword="True"
+                        Text="{Binding FTPConnection.Password}"
+                        Placeholder="e.g. PasswordHere" />
+
+                    <Label 
+                        Grid.Row="10" 
+                        Grid.Column="0" 
+                        Text="SSHHostKeyFingerprint"
+                        FontSize="Body" />
+
+                    <VerticalStackLayout
+                        Grid.Row="10" 
+                        Grid.Column="1">
+
+                        <Entry 
+                            Text="{Binding FTPConnection.SSHHostKeyFingerprint}" 
+                            Placeholder="" />
+                        <Label 
+                            Text="A long string of numbers and letters which can be obtained from an FTP client such as WinSCP or may be supplied by the FTP operator. Normally needed for SFTP connections"
+                            FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                        Grid.Row="11" 
+                        Grid.Column="0" 
+                        Text="Folder Path"
+                        FontSize="Body" />
+
+                    <VerticalStackLayout
+                        Grid.Row="11" 
+                        Grid.Column="1">
+
+                        <Entry 
+                            Text="{Binding FTPConnection.FolderPath}" 
+                            Placeholder="e.g. CloudServer1" />
+                        <Label 
+                            Text="Optional and will default to the root folder of the FTP server if not specified"
+                            FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <FlexLayout
+                        Grid.Row="12" 
+                        Grid.Column="1" 
+                        Wrap="Wrap"
+                        Direction="Row">
+                        <HorizontalStackLayout
+                        Spacing="5"
+                        Padding="0,5,5,5">
+                            <Button 
+                            x:Name="TestButton"
+                            Text="Test Settings" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                        Spacing="5"
+                        Padding="5">
+                            <Button 
+                            x:Name="SaveButton"
+                            Text="Save Changes" 
+                            Clicked="OnSaveButtonClicked"
+                            ImageSource="floppy.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                        Spacing="5"
+                        Padding="5">
+                            <Button 
+                            x:Name="CancelButton"
+                            Text="Cancel" />
+                        </HorizontalStackLayout>
+                    </FlexLayout>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <local:FooterPartial
+            Grid.Row="1"/>
+    </Grid>
 </ContentPage>

@@ -11537,7 +11537,7 @@
         }
       }
     },
-    "net9.0-android35.0/iossimulator-x64": {
+    "net9.0-android35.0/iossimulator-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -15365,7 +15365,7 @@
         }
       }
     },
-    "net9.0-android35.0/maccatalyst-x64": {
+    "net9.0-android35.0/maccatalyst-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -19193,7 +19193,7 @@
         }
       }
     },
-    "net9.0-android35.0/win10-x64": {
+    "net9.0-android35.0/win10-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -29730,7 +29730,7 @@
         }
       }
     },
-    "net9.0-ios18.2/iossimulator-x64": {
+    "net9.0-ios18.2/iossimulator-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -32000,7 +32000,7 @@
         }
       }
     },
-    "net9.0-ios18.2/maccatalyst-x64": {
+    "net9.0-ios18.2/maccatalyst-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -34270,7 +34270,7 @@
         }
       }
     },
-    "net9.0-ios18.2/win10-x64": {
+    "net9.0-ios18.2/win10-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -34873,10 +34873,7 @@
         }
       },
       "Microsoft.Data.SqlClient.SNI.runtime/6.0.2": {
-        "type": "package",
-        "native": {
-          "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": {}
-        }
+        "type": "package"
       },
       "Microsoft.EntityFrameworkCore/9.0.4": {
         "type": "package",
@@ -42231,7 +42228,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.2/iossimulator-x64": {
+    "net9.0-maccatalyst18.2/iossimulator-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -44119,7 +44116,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.2/maccatalyst-x64": {
+    "net9.0-maccatalyst18.2/maccatalyst-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -46007,7 +46004,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.2/win10-x64": {
+    "net9.0-maccatalyst18.2/win10-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -54149,7 +54146,7 @@
         }
       }
     },
-    "net9.0-windows10.0.19041/iossimulator-x64": {
+    "net9.0-windows10.0.19041/iossimulator-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -56205,7 +56202,7 @@
         }
       }
     },
-    "net9.0-windows10.0.19041/maccatalyst-x64": {
+    "net9.0-windows10.0.19041/maccatalyst-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -58261,7 +58258,7 @@
         }
       }
     },
-    "net9.0-windows10.0.19041/win10-x64": {
+    "net9.0-windows10.0.19041/win10-arm64": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -58866,7 +58863,7 @@
       "Microsoft.Data.SqlClient.SNI.runtime/6.0.2": {
         "type": "package",
         "native": {
-          "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": {}
+          "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/9.0.4": {
@@ -59346,7 +59343,7 @@
           "lib/net6.0-windows10.0.19041.0/Microsoft.Graphics.Canvas.Interop.dll": {}
         },
         "native": {
-          "runtimes/win-x64/native/Microsoft.Graphics.Canvas.dll": {}
+          "runtimes/win-arm64/native/Microsoft.Graphics.Canvas.dll": {}
         },
         "build": {
           "build/net6.0-windows10.0.19041.0/_._": {}
@@ -59771,7 +59768,7 @@
       "Microsoft.Web.WebView2/1.0.2903.40": {
         "type": "package",
         "native": {
-          "runtimes/win-x64/native/WebView2Loader.dll": {}
+          "runtimes/win-arm64/native/WebView2Loader.dll": {}
         },
         "build": {
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
@@ -59887,7 +59884,7 @@
           "lib/net6.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll": {}
         },
         "native": {
-          "runtimes/win-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {}
+          "runtimes/win-arm64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {}
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
@@ -68383,11 +68380,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\ConfigureImportExport.csproj",
+      "projectUniqueName": "C:\\ConfigureImportExport\\ConfigureImportExport\\ConfigureImportExport.csproj",
       "projectName": "ConfigureImportExport",
-      "projectPath": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\ConfigureImportExport.csproj",
+      "projectPath": "C:\\ConfigureImportExport\\ConfigureImportExport\\ConfigureImportExport.csproj",
       "packagesPath": "C:\\Users\\robin.wilson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\obj\\",
+      "outputPath": "C:\\ConfigureImportExport\\ConfigureImportExport\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -68505,16 +68502,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Runtime.Mono.android-arm64",
-            "version": "[9.0.4, 9.0.4]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Runtime.Mono.android-x64",
-            "version": "[9.0.4, 9.0.4]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.Android": {
             "privateAssets": "all"
@@ -68590,12 +68577,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Runtime.Mono.iossimulator-x64",
-            "version": "[9.0.4, 9.0.4]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.iOS": {
             "privateAssets": "all"
@@ -68672,12 +68653,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Runtime.Mono.maccatalyst-x64",
-            "version": "[9.0.4, 9.0.4]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.MacCatalyst": {
             "privateAssets": "all"
@@ -68771,13 +68746,13 @@
       "android-x64": {
         "#import": []
       },
-      "iossimulator-x64": {
+      "iossimulator-arm64": {
         "#import": []
       },
-      "maccatalyst-x64": {
+      "maccatalyst-arm64": {
         "#import": []
       },
-      "win10-x64": {
+      "win10-arm64": {
         "#import": []
       }
     }

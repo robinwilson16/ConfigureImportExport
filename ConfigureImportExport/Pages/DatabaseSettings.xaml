@@ -2,32 +2,147 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ConfigureImportExport.Pages.DatabaseSettings"
-             Title="DatabaseSettings">
-    <ScrollView>
-        <VerticalStackLayout
-        Padding="30,0"
-        Spacing="25">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
-                Text="Enter Database Settings and Press Test Connection Before Saving"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-                <Label Grid.Column="0" Grid.Row="1" Text="Server Name" />
-                <Entry Grid.Column="1" Grid.Row="1" Text="{Binding ServerName}" Placeholder="Enter Text" />
-            </Grid>
-            <Button
-                x:Name="SaveButton"
-                Text="Save Changes" 
-                Clicked="OnSaveButtonClicked"
-                HorizontalOptions="Fill" />
-        </VerticalStackLayout>
-    </ScrollView>
+             Title="Database Settings"
+             Shell.NavBarIsVisible="False"
+             xmlns:local="clr-namespace:ConfigureImportExport.Pages">
+    <Grid RowDefinitions="*,Auto">
+
+        <ScrollView
+            Grid.Row="0">
+            <VerticalStackLayout>
+                <Grid 
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                    ColumnDefinitions="Auto,*"
+                    ColumnSpacing="10"
+                    RowSpacing="10"
+                    Margin="10"
+                    Padding="10">
+                    <Label 
+                        Grid.Row="0" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        Text="Database Settings"
+                        FontSize="Title"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                    <Label 
+                        Grid.Row="1" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        Text="Specify the database settings below to connect to your local database server. Press Test Settings before saving"
+                        FontSize="Body"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                    <BoxView 
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Margin="0,0,0,20"
+                        HeightRequest="1" />
+
+                    <Label 
+                        Grid.Row="3" 
+                        Grid.Column="0" 
+                        Text="Server Name"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="3" 
+                        Grid.Column="1" 
+                        Text="{Binding DatabaseConnection.Server}"
+                        Placeholder="e.g. db01" />
+
+                    <Label 
+                        Grid.Row="4" 
+                        Grid.Column="0" 
+                        Text="Database Name"
+                        FontSize="Body" />
+
+                    <VerticalStackLayout
+                        Grid.Row="4" 
+                        Grid.Column="1">
+
+                        <Entry 
+                            Text="{Binding DatabaseConnection.Database}" 
+                            Placeholder="e.g. MISystemDatabase" />
+                        <Label 
+                            Text="The database where your table, view or stored procedure is located for exporting"
+                            FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                        Grid.Row="5" 
+                        Grid.Column="0" 
+                        Text="Use Windows Authentication"
+                        FontSize="Body" />
+
+                    <VerticalStackLayout
+                        Grid.Row="5" 
+                        Grid.Column="1">
+
+                        <CheckBox
+                            IsChecked="{Binding DatabaseConnection.UseWindowsAuth}" />
+                        <Label 
+                            Text="Saves entering a username and password into the config file but the user running the task must have sufficient access to the database"
+                            FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                        Grid.Row="6" 
+                        Grid.Column="0" 
+                        Text="Username"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="6" 
+                        Grid.Column="1" 
+                        Text="{Binding DatabaseConnection.Username}" 
+                        Placeholder="e.g. dbexportuser" />
+
+                    <Label 
+                        Grid.Row="7" 
+                        Grid.Column="0" 
+                        Text="Password"
+                        FontSize="Body" />
+                    <Entry 
+                        Grid.Row="7" 
+                        Grid.Column="1" 
+                        Text="{Binding DatabaseConnection.Password}"
+                        IsPassword="True"
+                        Placeholder="Enter Text" />
+
+                    <FlexLayout
+                        Grid.Row="8" 
+                        Grid.Column="1" 
+                        Wrap="Wrap"
+                        Direction="Row">
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="0,5,5,5">
+                            <Button 
+                                x:Name="TestButton"
+                                Text="Test Settings" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="5">
+                            <Button 
+                                x:Name="SaveButton"
+                                Text="Save Changes" 
+                                Clicked="OnSaveButtonClicked"
+                                ImageSource="floppy_fill.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="5">
+                            <Button 
+                                x:Name="CancelButton"
+                                Text="Cancel" />
+                        </HorizontalStackLayout>
+                    </FlexLayout>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <local:FooterPartial
+            Grid.Row="1"/>
+    </Grid>
 </ContentPage>

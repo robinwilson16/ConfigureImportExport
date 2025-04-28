@@ -13,6 +13,6 @@ namespace ConfigureImportExport.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
 
-        public DbSet<AppSettings> AppSettings { get; set; }
+        public DbSet<AppSettingsModel> AppSettings { get; set; }
     }
 }

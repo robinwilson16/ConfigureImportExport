@@ -11,8 +11,7 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />-->
-
-    <TabBar>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab 
             Title="Welcome"
             Icon="house_fill.png"
@@ -21,24 +20,31 @@
             <ShellContent ContentTemplate="{DataTemplate local:Welcome}" x:Name="TabWelcomeContent"/>
         </Tab>
         <Tab 
-        Title="Database Settings"
-        Icon="database_fill_gear.png"
-        x:Name="TabDatabaseSettings"
-        >
+            Title="Database Settings"
+            Icon="database_fill_gear.png"
+            x:Name="TabDatabaseSettings"
+            >
             <ShellContent ContentTemplate="{DataTemplate local:DatabaseSettings}" x:Name="TabDatabaseSettingsContent"/>
         </Tab>
         <Tab 
-        Title="Export Settings"
-        Icon="file_earmark_spreadsheet.png"
-        x:Name="TabExportSettings"
-        >
+            Title="Export Settings"
+            Icon="list_columns.png"
+            x:Name="TabExportSettings"
+            >
             <ShellContent ContentTemplate="{DataTemplate local:ExportSettings}" x:Name="TabExportSettingsContent"/>
         </Tab>
         <Tab 
-        Title="FTP Settings"
-        Icon="cloud_arrow_up_fill.png"
-        x:Name="TabFTPSettings"
-        >
+            Title="File Settings"
+            Icon="file_earmark_spreadsheet.png"
+            x:Name="TabFileSettings"
+            >
+            <ShellContent ContentTemplate="{DataTemplate local:FileSettings}" x:Name="TabFileSettingsContent"/>
+        </Tab>
+        <Tab 
+            Title="FTP Settings"
+            Icon="cloud_arrow_up_fill.png"
+            x:Name="TabFTPSettings"
+            >
             <ShellContent ContentTemplate="{DataTemplate local:FTPSettings}" x:Name="TabFTPSettingsContent"/>
         </Tab>
         <Tab 
@@ -48,6 +54,13 @@
             >
             <ShellContent ContentTemplate="{DataTemplate local:About}" x:Name="TabAboutContent"/>
         </Tab>
-    </TabBar>
+        
+    </FlyoutItem>
+
+    <ShellContent 
+        Title="GitHub"
+        Icon="monkey.png"
+        ContentTemplate="{DataTemplate local:About}" />
+
 
 </Shell>

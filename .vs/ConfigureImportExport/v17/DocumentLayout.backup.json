@@ -1,62 +1,122 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\",
+  "WorkspaceRootPath": "C:\\ConfigureImportExport\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\pages\\databasesettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\databasesettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\pages\\about.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\about.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\pages\\welcome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\welcome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\pages\\welcome.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\welcome.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\welcome.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\footerpartial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\footerpartial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\pages\\databasesettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\databasesettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\ftpsettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\ftpsettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\models\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\databasesettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\databasesettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\filesettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\filesettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\services\\appsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\exportsettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\exportsettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\about.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\about.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\footerpartial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\footerpartial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\services\\appsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\services\\appsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\databasesettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\databasesettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\users\\robin.wilson\\source\\repos\\configureimportexport\\configureimportexport\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\configureimportexport.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\configureimportexport.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\filesettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\filesettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\models\\appsettingsftpconnectionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\models\\appsettingsftpconnectionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\models\\appsettingsexcelfilemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\models\\appsettingsexcelfilemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\models\\appsettingsdatabasetablemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\models\\appsettingsdatabasetablemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\ftpsettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\ftpsettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\exportsettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\exportsettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ConfigureImportExport\\ConfigureImportExport\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-arm64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ConfigureImportExport\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-arm64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\models\\appsettingsdatabaseconnectionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\models\\appsettingsdatabaseconnectionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\models\\appsettingsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\models\\appsettingsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\models\\appsettingsstoredproceduremodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\models\\appsettingsstoredproceduremodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|c:\\configureimportexport\\configureimportexport\\pages\\welcome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B4C07EA-B341-4573-8BE0-478A7E2987E6}|ConfigureImportExport\\ConfigureImportExport.csproj|solutionrelative:configureimportexport\\pages\\welcome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,53 +126,365 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "DatabaseSettings.xaml",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\DatabaseSettings.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\DatabaseSettings.xaml",
               "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\DatabaseSettings.xaml",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\DatabaseSettings.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\DatabaseSettings.xaml",
               "RelativeToolTip": "ConfigureImportExport\\Pages\\DatabaseSettings.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAIIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-21T14:11:19.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\MainPage.xaml",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\MainPage.xaml",
-              "RelativeToolTip": "ConfigureImportExport\\Pages\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAARAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "About.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\About.xaml",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\About.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\About.xaml",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\About.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-21T13:24:08.725Z"
+              "WhenOpened": "2025-04-21T16:34:27.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExportSettings.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\ExportSettings.xaml",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\ExportSettings.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\ExportSettings.xaml",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\ExportSettings.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T11:03:17.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FileSettings.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FileSettings.xaml",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\FileSettings.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FileSettings.xaml",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\FileSettings.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T15:54:46.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FTPSettings.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FTPSettings.xaml",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\FTPSettings.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FTPSettings.xaml",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\FTPSettings.xaml",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAKUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T11:03:22.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Welcome.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\Welcome.xaml",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\Welcome.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\Welcome.xaml",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\Welcome.xaml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-21T16:31:58.346Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FooterPartial.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FooterPartial.xaml",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\FooterPartial.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FooterPartial.xaml",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\FooterPartial.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-27T16:50:57.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FooterPartial.xaml.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FooterPartial.xaml.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\FooterPartial.xaml.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FooterPartial.xaml.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\FooterPartial.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T17:20:55.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ConfigureImportExport",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\ConfigureImportExport.csproj",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\ConfigureImportExport.csproj",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\ConfigureImportExport.csproj",
+              "RelativeToolTip": "ConfigureImportExport\\ConfigureImportExport.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-27T08:30:45.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DatabaseSettings.xaml.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\DatabaseSettings.xaml.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\DatabaseSettings.xaml.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\DatabaseSettings.xaml.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\DatabaseSettings.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T14:11:20.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppSettingsService.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Services\\AppSettingsService.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Services\\AppSettingsService.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Services\\AppSettingsService.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Services\\AppSettingsService.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T12:34:44.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\AppShell.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\AppShell.xaml",
               "RelativeDocumentMoniker": "ConfigureImportExport\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\AppShell.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\AppShell.xaml",
               "RelativeToolTip": "ConfigureImportExport\\AppShell.xaml",
-              "ViewState": "AgIAABwAAAAAAAAAAADwvy0AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-21T12:10:00.973Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
+              "Title": "AppSettingsDatabaseTableModel.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsDatabaseTableModel.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Models\\AppSettingsDatabaseTableModel.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsDatabaseTableModel.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Models\\AppSettingsDatabaseTableModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T12:03:57.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FileSettings.xaml.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FileSettings.xaml.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\FileSettings.xaml.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FileSettings.xaml.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\FileSettings.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:55:36.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppSettingsExcelFileModel.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsExcelFileModel.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Models\\AppSettingsExcelFileModel.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsExcelFileModel.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Models\\AppSettingsExcelFileModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T12:05:42.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppSettingsFTPConnectionModel.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsFTPConnectionModel.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Models\\AppSettingsFTPConnectionModel.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsFTPConnectionModel.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Models\\AppSettingsFTPConnectionModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T12:08:43.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FTPSettings.xaml.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FTPSettings.xaml.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\FTPSettings.xaml.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\FTPSettings.xaml.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\FTPSettings.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:03:16.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ExportSettings.xaml.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\ExportSettings.xaml.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\ExportSettings.xaml.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\ExportSettings.xaml.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Pages\\ExportSettings.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T09:59:37.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AppSettingsStoredProcedureModel.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsStoredProcedureModel.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Models\\AppSettingsStoredProcedureModel.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsStoredProcedureModel.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Models\\AppSettingsStoredProcedureModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T12:11:38.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AppSettingsDatabaseConnectionModel.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsDatabaseConnectionModel.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Models\\AppSettingsDatabaseConnectionModel.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsDatabaseConnectionModel.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Models\\AppSettingsDatabaseConnectionModel.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAnwEoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T12:01:17.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-arm64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-arm64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-arm64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "ConfigureImportExport\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-arm64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAiwEQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T13:57:03.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppSettingsModel.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsModel.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Models\\AppSettingsModel.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettingsModel.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Models\\AppSettingsModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T12:10:54.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\MainPage.xaml",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\MainPage.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\MainPage.xaml",
+              "RelativeToolTip": "ConfigureImportExport\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-21T12:09:42.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\MainPage.xaml.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\MainPage.xaml.cs",
+              "RelativeToolTip": "ConfigureImportExport\\MainPage.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAvwCYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T12:40:36.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T12:26:15.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\MauiProgram.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\MauiProgram.cs",
+              "RelativeToolTip": "ConfigureImportExport\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T09:58:21.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "BaseModel.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\BaseModel.cs",
+              "RelativeDocumentMoniker": "ConfigureImportExport\\Models\\BaseModel.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Models\\BaseModel.cs",
+              "RelativeToolTip": "ConfigureImportExport\\Models\\BaseModel.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T09:34:08.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "Welcome.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\Welcome.xaml.cs",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\Welcome.xaml.cs",
               "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\Welcome.xaml.cs",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\Welcome.xaml.cs",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\Pages\\Welcome.xaml.cs",
               "RelativeToolTip": "ConfigureImportExport\\Pages\\Welcome.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -120,125 +492,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "About.xaml",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\About.xaml",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\About.xaml",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\About.xaml",
-              "RelativeToolTip": "ConfigureImportExport\\Pages\\About.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-21T16:34:27.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DatabaseSettings.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\DatabaseSettings.xaml.cs",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\DatabaseSettings.xaml.cs",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\DatabaseSettings.xaml.cs",
-              "RelativeToolTip": "ConfigureImportExport\\Pages\\DatabaseSettings.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:11:20.983Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\MainPage.xaml",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\MainPage.xaml",
-              "RelativeToolTip": "ConfigureImportExport\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-21T12:09:42.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 27,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\App.xaml",
+              "DocumentMoniker": "C:\\ConfigureImportExport\\ConfigureImportExport\\App.xaml",
               "RelativeDocumentMoniker": "ConfigureImportExport\\App.xaml",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\App.xaml",
+              "ToolTip": "C:\\ConfigureImportExport\\ConfigureImportExport\\App.xaml",
               "RelativeToolTip": "ConfigureImportExport\\App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-23T11:25:53.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AppSettingsService.cs",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Services\\AppSettingsService.cs",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\Services\\AppSettingsService.cs",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Services\\AppSettingsService.cs",
-              "RelativeToolTip": "ConfigureImportExport\\Services\\AppSettingsService.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAiwEgAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T12:34:44.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppSettings.cs",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettings.cs",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\Models\\AppSettings.cs",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Models\\AppSettings.cs",
-              "RelativeToolTip": "ConfigureImportExport\\Models\\AppSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T12:10:54.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Welcome.xaml",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\Welcome.xaml",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\Welcome.xaml",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\Welcome.xaml",
-              "RelativeToolTip": "ConfigureImportExport\\Pages\\Welcome.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-21T16:31:58.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\MainPage.xaml.cs",
-              "RelativeToolTip": "ConfigureImportExport\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T12:40:36.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\Pages\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Pages\\MainPage.xaml.cs",
-              "RelativeToolTip": "ConfigureImportExport\\Pages\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:24:12.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "ConfigureImportExport\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\robin.wilson\\source\\repos\\ConfigureImportExport\\ConfigureImportExport\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "ConfigureImportExport\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T12:26:15.143Z"
+              "WhenOpened": "2025-04-23T11:25:53.911Z"
             }
           ]
         }

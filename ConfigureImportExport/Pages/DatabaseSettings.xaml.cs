@@ -6,7 +6,7 @@ namespace ConfigureImportExport.Pages;
 public partial class DatabaseSettings : ContentPage
 {
     public AppSettingsService AppSettingsService;
-    public AppSettings? AppSettings;
+    public AppSettingsModel? AppSettings;
     public DatabaseSettings()
     {
         InitializeComponent();
@@ -17,10 +17,17 @@ public partial class DatabaseSettings : ContentPage
         BindingContext = AppSettings;
     }
 
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        //Code here
+    }
+
     private async void OnSaveButtonClicked(object sender, EventArgs e)
     {
         //AppSettings.ServerName = ServerName;
         //AppSettingsService appSettingsService = new AppSettingsService();
-        AppSettings? appSettings = await AppSettingsService.Set(AppSettings);
+        AppSettingsModel? appSettings = await AppSettingsService.Set(AppSettings);
     }
 }

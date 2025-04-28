@@ -2,11 +2,284 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ConfigureImportExport.Pages.ExportSettings"
-             Title="ExportSettings">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Export Settings"
+             Shell.NavBarIsVisible="False"
+             xmlns:local="clr-namespace:ConfigureImportExport.Pages">
+    <Grid RowDefinitions="*,Auto">
+        <ScrollView
+            Grid.Row="0">
+            <VerticalStackLayout>
+                <Grid 
+                RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                ColumnDefinitions="Auto,*"
+                ColumnSpacing="10"
+                RowSpacing="10"
+                Margin="10"
+                Padding="10">
+                    <Label 
+                    Grid.Row="0" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2"
+                    Text="Export Settings"
+                    FontSize="Title"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                    <Label 
+                    Grid.Row="1" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2"
+                    Text="Specify the export settings below to select the database object to extract the information from where all columns from this table/view/procedure will be exported"
+                    FontSize="Body"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                    <BoxView 
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,0,0,20"
+                    HeightRequest="1" />
+
+                    <Label 
+                    Grid.Row="3" 
+                    Grid.Column="0" 
+                    Text="Database"
+                    FontSize="Body" />
+                    <Entry 
+                    Grid.Row="3" 
+                    Grid.Column="1" 
+                    Text="{Binding DatabaseTable.Database}"
+                    Placeholder="e.g. MISystemDatabase" />
+
+                    <Label 
+                    Grid.Row="4" 
+                    Grid.Column="0" 
+                    Text="Schema"
+                    FontSize="Body" />
+
+                    <VerticalStackLayout
+                    Grid.Row="4" 
+                    Grid.Column="1">
+
+                        <Entry 
+                        Text="{Binding DatabaseTable.Schema}" 
+                        Placeholder="e.g. dbo" />
+                        <Label 
+                        Text="The database schema where you are exporting from. Usually dbo"
+                        FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                    Grid.Row="5" 
+                    Grid.Column="0" 
+                    Text="Table or View"
+                    FontSize="Body" />
+
+                    <VerticalStackLayout
+                    Grid.Row="5" 
+                    Grid.Column="1">
+
+                        <Entry 
+                            Text="{Binding DatabaseTable.TableOrView}" 
+                            Placeholder="e.g. MyTable1" />
+                        <Label 
+                        Text="Specify a table or a view here or instead use a stored procedure below which can include parameters"
+                        FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                    Grid.Row="6" 
+                    Grid.Column="0" 
+                    Text="Stored Procedure Command"
+                    FontSize="Body" />
+
+                    <VerticalStackLayout
+                        Grid.Row="6" 
+                        Grid.Column="1">
+
+                        <Entry 
+                            Text="{Binding DatabaseTable.StoredProcedureCommand}" 
+                            Placeholder="e.g. SPR_MyProcedure" />
+                        <Label 
+                            Text="If both the table/view and stored procedure are specified then the stored procedure takes precedence"
+                            FontSize="Micro" />
+                        <Label 
+                            Text="If using a stored procerdure ensure you GRANT EXEC permission to the user in the database otherwise it will not find the procedure"
+                            FontSize="Micro" />
+                        <Label 
+                            Text="Ensure you also GRANT DB_DATAREADER to the databases accessed by the procedure too."
+                            FontSize="Micro" />
+                    </VerticalStackLayout>
+
+                    <Label 
+                        Grid.Row="7" 
+                        Grid.Column="0" 
+                        Text="Number Parameter 1"
+                        FontSize="Body" />
+                    <Grid 
+                        Grid.Row="7" 
+                        Grid.Column="1" 
+                        RowDefinitions="Auto"
+                        ColumnDefinitions="*,*,*,*"
+                        ColumnSpacing="10"
+                        RowSpacing="10">
+                        <Label 
+                            Grid.Row="0" 
+                            Grid.Column="0" 
+                            Text="Parameter Name"
+                            FontSize="Body" />
+                        <Entry 
+                            Grid.Row="0" 
+                            Grid.Column="1" 
+                            Text="{Binding DatabaseTable.StoredProcedureParam1IntegerName}" 
+                            Placeholder="e.g. LastRecordID" />
+                        <Label 
+                            Grid.Row="0" 
+                            Grid.Column="2" 
+                            Text="Parameter Value"
+                            FontSize="Body" />
+                        <Entry 
+                            Grid.Row="0" 
+                            Grid.Column="3" 
+                            Text="{Binding DatabaseTable.StoredProcedureParam1IntegerValue}" 
+                            Placeholder="e.g. 1145" />
+                    </Grid>
+
+                    <Label 
+                        Grid.Row="8" 
+                        Grid.Column="0" 
+                        Text="Number Parameter 2"
+                        FontSize="Body" />
+                    <Grid 
+                        Grid.Row="8" 
+                        Grid.Column="1" 
+                        RowDefinitions="Auto"
+                        ColumnDefinitions="*,*,*,*"
+                        ColumnSpacing="10"
+                        RowSpacing="10">
+                        <Label 
+                            Grid.Row="0" 
+                            Grid.Column="0" 
+                            Text="Parameter Name"
+                            FontSize="Body" />
+                        <Entry 
+                            Grid.Row="0" 
+                            Grid.Column="1" 
+                            Text="{Binding DatabaseTable.StoredProcedureParam2IntegerName}" 
+                            Placeholder="e.g. LastRecordID" />
+                        <Label 
+                            Grid.Row="0" 
+                            Grid.Column="2" 
+                            Text="Parameter Value"
+                            FontSize="Body" />
+                        <Entry 
+                            Grid.Row="0" 
+                            Grid.Column="3" 
+                            Text="{Binding DatabaseTable.StoredProcedureParam2IntegerValue}" 
+                            Placeholder="e.g. 1145" />
+                    </Grid>
+
+                    <Label 
+                        Grid.Row="9" 
+                        Grid.Column="0" 
+                        Text="Text Parameter 1"
+                        FontSize="Body" />
+                    <Grid 
+                        Grid.Row="9" 
+                        Grid.Column="1" 
+                        RowDefinitions="Auto"
+                        ColumnDefinitions="*,*,*,*"
+                        ColumnSpacing="10"
+                        RowSpacing="10">
+                        <Label 
+                            Grid.Row="0" 
+                            Grid.Column="0" 
+                            Text="Parameter Name"
+                            FontSize="Body" />
+                        <Entry 
+                            Grid.Row="0" 
+                            Grid.Column="1" 
+                            Text="{Binding DatabaseTable.StoredProcedureParam1StringName}" 
+                            Placeholder="e.g. AcademicYearID" />
+                        <Label 
+                            Grid.Row="0" 
+                            Grid.Column="2" 
+                            Text="Parameter Value"
+                            FontSize="Body" />
+                        <Entry 
+                            Grid.Row="0" 
+                            Grid.Column="3" 
+                            Text="{Binding DatabaseTable.StoredProcedureParam1StringValue}" 
+                            Placeholder="e.g. 25/26" />
+                    </Grid>
+
+                    <Label 
+                        Grid.Row="10" 
+                        Grid.Column="0" 
+                        Text="Text Parameter 2"
+                        FontSize="Body" />
+                    <Grid 
+                        Grid.Row="10" 
+                        Grid.Column="1" 
+                        RowDefinitions="Auto"
+                        ColumnDefinitions="*,*,*,*"
+                        ColumnSpacing="10"
+                        RowSpacing="10">
+                        <Label 
+                            Grid.Row="0" 
+                            Grid.Column="0" 
+                            Text="Parameter Name"
+                            FontSize="Body" />
+                        <Entry 
+                            Grid.Row="0" 
+                            Grid.Column="1" 
+                            Text="{Binding DatabaseTable.StoredProcedureParam2StringName}" 
+                            Placeholder="e.g. AcademicYearID" />
+                        <Label 
+                            Grid.Row="0" 
+                            Grid.Column="2" 
+                            Text="Parameter Value"
+                            FontSize="Body" />
+                        <Entry 
+                            Grid.Row="0" 
+                            Grid.Column="3" 
+                            Text="{Binding DatabaseTable.StoredProcedureParam2StringValue}" 
+                            Placeholder="e.g. 25/26" />
+                    </Grid>
+
+                    <FlexLayout
+                    Grid.Row="11" 
+                    Grid.Column="1" 
+                    Wrap="Wrap"
+                    Direction="Row">
+                        <HorizontalStackLayout
+                        Spacing="5"
+                        Padding="0,5,5,5">
+                            <Button 
+                            x:Name="TestButton"
+                            Text="Test Settings" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                        Spacing="5"
+                        Padding="5">
+                            <Button 
+                            x:Name="SaveButton"
+                            Text="Save Changes" 
+                            Clicked="OnSaveButtonClicked"
+                            ImageSource="floppy.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                        Spacing="5"
+                        Padding="5">
+                            <Button 
+                            x:Name="CancelButton"
+                            Text="Cancel" />
+                        </HorizontalStackLayout>
+                    </FlexLayout>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <local:FooterPartial
+            Grid.Row="1"/>
+    </Grid>
 </ContentPage>
