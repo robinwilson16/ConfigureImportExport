@@ -17,7 +17,7 @@ namespace ConfigureImportExport.Models
                 if (_Server != value)
                 {
                     _Server = value;
-                    RaisePropertyChanged(nameof(Server));
+                    TriggerPropertyChanged(nameof(Server));
                 }
             }
         }
@@ -31,7 +31,7 @@ namespace ConfigureImportExport.Models
                 if (_Database != value)
                 {
                     _Database = value;
-                    RaisePropertyChanged(nameof(Database));
+                    TriggerPropertyChanged(nameof(Database));
                 }
             }
         }
@@ -45,7 +45,7 @@ namespace ConfigureImportExport.Models
                 if (_UseWindowsAuth != value)
                 {
                     _UseWindowsAuth = value;
-                    RaisePropertyChanged(nameof(UseWindowsAuth));
+                    TriggerPropertyChanged(nameof(UseWindowsAuth));
                 }
             }
         }
@@ -59,7 +59,7 @@ namespace ConfigureImportExport.Models
                 if (_Username != value)
                 {
                     _Username = value;
-                    RaisePropertyChanged(nameof(Username));
+                    TriggerPropertyChanged(nameof(Username));
                 }
             }
         }
@@ -73,7 +73,7 @@ namespace ConfigureImportExport.Models
                 if (_Password != value)
                 {
                     _Password = value;
-                    RaisePropertyChanged(nameof(Password));
+                    TriggerPropertyChanged(nameof(Password));
                 }
             }
         }

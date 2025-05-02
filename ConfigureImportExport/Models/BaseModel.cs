@@ -32,12 +32,12 @@ namespace ConfigureImportExport.Models
 
         #region RaisePropertyChanged Method
         /// <summary>
-        /// Event used to raise changes to any bound UI objects
+        /// Event used to trigger changes to any bound UI objects
         /// </summary>  
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public virtual void RaisePropertyChanged(string propertyName)
+        public virtual void TriggerPropertyChanged(string propertyName)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

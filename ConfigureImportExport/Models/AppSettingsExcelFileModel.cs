@@ -6,14 +6,104 @@ using System.Threading.Tasks;
 
 namespace ConfigureImportExport.Models
 {
-    public class AppSettingsExcelFileModel
+    public class AppSettingsExcelFileModel : BaseModel
     {
-        public string? Folder { get; set; }
-        public string? FileName { get; set; }
-        public string? SheetName { get; set; }
-        public string? ColumnNameAsFileName { get; set; }
-        public string? DateFormat { get; set; }
-        public string? TimeFormat { get; set; }
-        public string? CurrencyFormat { get; set; }
+        private string? _Folder;
+        public string? Folder
+        {
+            get => _Folder;
+            set
+            {
+                if (_Folder != value)
+                {
+                    _Folder = value;
+                    TriggerPropertyChanged(nameof(Folder));
+                }
+            }
+        }
+
+        private string? _FileName;
+        public string? FileName
+        {
+            get => _FileName;
+            set
+            {
+                if (_FileName != value)
+                {
+                    _FileName = value;
+                    TriggerPropertyChanged(nameof(FileName));
+                }
+            }
+        }
+
+        private string? _SheetName;
+        public string? SheetName
+        {
+            get => _SheetName;
+            set
+            {
+                if (_SheetName != value)
+                {
+                    _SheetName = value;
+                    TriggerPropertyChanged(nameof(SheetName));
+                }
+            }
+        }
+
+        private string? _ColumnNameAsFileName;
+        public string? ColumnNameAsFileName
+        {
+            get => _ColumnNameAsFileName;
+            set
+            {
+                if (_ColumnNameAsFileName != value)
+                {
+                    _ColumnNameAsFileName = value;
+                    TriggerPropertyChanged(nameof(ColumnNameAsFileName));
+                }
+            }
+        }
+
+        private string? _DateFormat;
+        public string? DateFormat
+        {
+            get => _DateFormat;
+            set
+            {
+                if (_DateFormat != value)
+                {
+                    _DateFormat = value;
+                    TriggerPropertyChanged(nameof(DateFormat));
+                }
+            }
+        }
+
+        private string? _TimeFormat;
+        public string? TimeFormat
+        {
+            get => _TimeFormat;
+            set
+            {
+                if (_TimeFormat != value)
+                {
+                    _TimeFormat = value;
+                    TriggerPropertyChanged(nameof(TimeFormat));
+                }
+            }
+        }
+
+        private string? _CurrencyFormat;
+        public string? CurrencyFormat
+        {
+            get => _CurrencyFormat;
+            set
+            {
+                if (_CurrencyFormat != value)
+                {
+                    _CurrencyFormat = value;
+                    TriggerPropertyChanged(nameof(CurrencyFormat));
+                }
+            }
+        }
     }
 }

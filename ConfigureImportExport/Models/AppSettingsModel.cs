@@ -19,7 +19,6 @@ namespace ConfigureImportExport.Models
         public virtual AppSettingsDatabaseTableModel? DatabaseTable { get; set; } = new AppSettingsDatabaseTableModel();
         public virtual AppSettingsExcelFileModel? ExcelFile { get; set; } = new AppSettingsExcelFileModel();
         public virtual AppSettingsFTPConnectionModel? FTPConnection { get; set; } = new AppSettingsFTPConnectionModel();
-        public virtual AppSettingsStoredProcedureModel? StoredProcedure { get; set; } = new AppSettingsStoredProcedureModel();
 
         public string? VersionAndDate
         {

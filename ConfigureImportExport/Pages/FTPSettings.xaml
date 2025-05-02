@@ -79,33 +79,40 @@
                         Grid.Column="0" 
                         Text="Type"
                         FontSize="Body" />
-                    <Entry 
+                    <Picker 
                         Grid.Row="5" 
                         Grid.Column="1" 
-                        Text="{Binding FTPConnection.Type}" 
-                        Placeholder="e.g. dbexportuser" />
+                        ItemsSource="{Binding FTPConnection.FTPConnectionType}" 
+                        ItemDisplayBinding="{Binding DisplayName}"
+                        SelectedItem="{Binding FTPConnection.Type, Mode=TwoWay}" />
 
                     <Label 
                         Grid.Row="6" 
                         Grid.Column="0" 
                         Text="Port"
                         FontSize="Body" />
-                    <Entry 
+                    <VerticalStackLayout
                         Grid.Row="6" 
-                        Grid.Column="1" 
-                        Text="{Binding FTPConnection.Port}"
-                        Placeholder="e.g. 21" />
+                        Grid.Column="1">
 
+                        <Entry 
+                            Text="{Binding FTPConnection.Port}" 
+                            Placeholder="e.g. 21" />
+                        <Label 
+                            Text="Normally 21 for FTP/FTPS and 22 for SFTP/SCP"
+                            FontSize="Micro" />
+                    </VerticalStackLayout>
+                    
                     <Label 
                         Grid.Row="7" 
                         Grid.Column="0" 
                         Text="Mode"
                         FontSize="Body" />
-                    <Entry 
+                    <Picker 
                         Grid.Row="7" 
                         Grid.Column="1" 
-                        Text="{Binding FTPConnection.Mode}"
-                        Placeholder="e.g. Passive" />
+                        ItemsSource="{Binding FTPConnection.FTPConnectionMode}" 
+                        SelectedItem="{Binding FTPConnection.Mode, Mode=TwoWay}" />
 
                     <Label 
                         Grid.Row="8" 
