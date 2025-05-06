@@ -3,7 +3,8 @@
     x:Class="ConfigureImportExport.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ConfigureImportExport.Pages"
+    xmlns:local="clr-namespace:ConfigureImportExport"
+    xmlns:Pages="clr-namespace:ConfigureImportExport.Pages"
     Shell.FlyoutBehavior="Flyout"
     Title="Configure Import Export Utility">
 
@@ -17,42 +18,42 @@
             Icon="house_fill.png"
             x:Name="TabWelcome"
             >
-            <ShellContent ContentTemplate="{DataTemplate local:Welcome}" x:Name="TabWelcomeContent"/>
+            <ShellContent ContentTemplate="{DataTemplate Pages:Welcome}" x:Name="TabWelcomeContent"/>
         </Tab>
         <Tab 
             Title="Database Settings"
             Icon="database_fill_gear.png"
             x:Name="TabDatabaseSettings"
             >
-            <ShellContent ContentTemplate="{DataTemplate local:DatabaseSettings}" x:Name="TabDatabaseSettingsContent"/>
+            <ShellContent ContentTemplate="{DataTemplate Pages:DatabaseSettings}" x:Name="TabDatabaseSettingsContent"/>
         </Tab>
         <Tab 
             Title="Export Settings"
             Icon="list_columns.png"
             x:Name="TabExportSettings"
             >
-            <ShellContent ContentTemplate="{DataTemplate local:ExportSettings}" x:Name="TabExportSettingsContent"/>
+            <ShellContent ContentTemplate="{DataTemplate Pages:ExportSettings}" x:Name="TabExportSettingsContent"/>
         </Tab>
         <Tab 
             Title="File Settings"
             Icon="file_earmark_spreadsheet.png"
             x:Name="TabFileSettings"
             >
-            <ShellContent ContentTemplate="{DataTemplate local:FileSettings}" x:Name="TabFileSettingsContent"/>
+            <ShellContent ContentTemplate="{DataTemplate Pages:FileSettings}" x:Name="TabFileSettingsContent"/>
         </Tab>
         <Tab 
             Title="FTP Settings"
             Icon="cloud_arrow_up_fill.png"
             x:Name="TabFTPSettings"
             >
-            <ShellContent ContentTemplate="{DataTemplate local:FTPSettings}" x:Name="TabFTPSettingsContent"/>
+            <ShellContent ContentTemplate="{DataTemplate Pages:FTPSettings}" x:Name="TabFTPSettingsContent"/>
         </Tab>
         <Tab 
             Title="About"
             Icon="question_circle_fill.png"
             x:Name="TabAbout"
             >
-            <ShellContent ContentTemplate="{DataTemplate local:About}" x:Name="TabAboutContent"/>
+            <ShellContent ContentTemplate="{DataTemplate Pages:About}" x:Name="TabAboutContent"/>
         </Tab>
         
     </FlyoutItem>
@@ -60,7 +61,7 @@
     <ShellContent 
         Title="GitHub"
         Icon="monkey.png"
-        ContentTemplate="{DataTemplate local:About}" />
+        ContentTemplate="{DataTemplate Pages:About}" />
 
 
 </Shell>

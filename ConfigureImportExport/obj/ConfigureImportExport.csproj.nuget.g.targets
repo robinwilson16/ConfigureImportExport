@@ -74,6 +74,7 @@
     <Import Project="$(NuGetPackageRoot)xamarin.androidx.lifecycle.livedata\2.8.7.2\buildTransitive\net8.0-android34.0\Xamarin.AndroidX.Lifecycle.LiveData.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.androidx.lifecycle.livedata\2.8.7.2\buildTransitive\net8.0-android34.0\Xamarin.AndroidX.Lifecycle.LiveData.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.androidx.exifinterface\1.3.7.9\buildTransitive\net8.0-android34.0\Xamarin.AndroidX.ExifInterface.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.androidx.exifinterface\1.3.7.9\buildTransitive\net8.0-android34.0\Xamarin.AndroidX.ExifInterface.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.androidx.browser\1.8.0.8\buildTransitive\net8.0-android34.0\Xamarin.AndroidX.Browser.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.androidx.browser\1.8.0.8\buildTransitive\net8.0-android34.0\Xamarin.AndroidX.Browser.targets')" />
+    <Import Project="$(NuGetPackageRoot)winscp\6.5.0\buildTransitive\WinSCP.targets" Condition="Exists('$(NuGetPackageRoot)winscp\6.5.0\buildTransitive\WinSCP.targets')" />
     <Import Project="$(NuGetPackageRoot)system.text.json\9.0.4\buildTransitive\net8.0\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\9.0.4\buildTransitive\net8.0\System.Text.Json.targets')" />
     <Import Project="$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets" Condition="Exists('$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.maui.resizetizer\9.0.60\buildTransitive\Microsoft.Maui.Resizetizer.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.maui.resizetizer\9.0.60\buildTransitive\Microsoft.Maui.Resizetizer.targets')" />
@@ -86,6 +87,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\8.0.6\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\8.0.6\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets')" />
   </ImportGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net9.0-ios' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)winscp\6.5.0\buildTransitive\WinSCP.targets" Condition="Exists('$(NuGetPackageRoot)winscp\6.5.0\buildTransitive\WinSCP.targets')" />
     <Import Project="$(NuGetPackageRoot)system.text.json\9.0.4\buildTransitive\net8.0\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\9.0.4\buildTransitive\net8.0\System.Text.Json.targets')" />
     <Import Project="$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets" Condition="Exists('$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.maui.resizetizer\9.0.60\buildTransitive\Microsoft.Maui.Resizetizer.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.maui.resizetizer\9.0.60\buildTransitive\Microsoft.Maui.Resizetizer.targets')" />
@@ -98,6 +100,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\8.0.6\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\8.0.6\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets')" />
   </ImportGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net9.0-maccatalyst' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)winscp\6.5.0\buildTransitive\WinSCP.targets" Condition="Exists('$(NuGetPackageRoot)winscp\6.5.0\buildTransitive\WinSCP.targets')" />
     <Import Project="$(NuGetPackageRoot)system.text.json\9.0.4\buildTransitive\net8.0\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\9.0.4\buildTransitive\net8.0\System.Text.Json.targets')" />
     <Import Project="$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets" Condition="Exists('$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.maui.resizetizer\9.0.60\buildTransitive\Microsoft.Maui.Resizetizer.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.maui.resizetizer\9.0.60\buildTransitive\Microsoft.Maui.Resizetizer.targets')" />
@@ -110,6 +113,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\8.0.6\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\8.0.6\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets')" />
   </ImportGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net9.0-windows10.0.19041.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)winscp\6.5.0\buildTransitive\WinSCP.targets" Condition="Exists('$(NuGetPackageRoot)winscp\6.5.0\buildTransitive\WinSCP.targets')" />
     <Import Project="$(NuGetPackageRoot)system.text.json\9.0.4\buildTransitive\net8.0\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\9.0.4\buildTransitive\net8.0\System.Text.Json.targets')" />
     <Import Project="$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets" Condition="Exists('$(NuGetPackageRoot)mono.texttemplating\3.0.0\buildTransitive\Mono.TextTemplating.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.windows.sdk.buildtools\10.0.22621.756\buildTransitive\Microsoft.Windows.SDK.BuildTools.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.windows.sdk.buildtools\10.0.22621.756\buildTransitive\Microsoft.Windows.SDK.BuildTools.targets')" />

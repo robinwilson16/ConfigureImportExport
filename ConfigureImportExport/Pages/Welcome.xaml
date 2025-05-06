@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ConfigureImportExport.Pages.Welcome"
-             Title="Welcome"
+             Title="Welcome to the Configuration Utility for File Import and Export Tools"
              Shell.NavBarIsVisible="False"
              xmlns:local="clr-namespace:ConfigureImportExport.Pages">
     <Grid RowDefinitions="*,Auto">
@@ -10,48 +10,127 @@
             Grid.Row="0">
             <VerticalStackLayout>
                 <Grid 
-                RowDefinitions="Auto,Auto,Auto,Auto,Auto"
-                ColumnDefinitions="Auto,*"
-                ColumnSpacing="10"
-                RowSpacing="10"
-                Margin="10"
-                Padding="10">
-                    <Label 
-                        Grid.Row="0" 
-                        Grid.Column="0" 
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                    ColumnDefinitions="*"
+                    ColumnSpacing="10"
+                    RowSpacing="10"
+                    Margin="10"
+                    Padding="10">
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="0"
                         Grid.ColumnSpan="2"
+                        RowDefinitions="Auto"
+                        ColumnDefinitions="*,*,*"
+                        ColumnSpacing="10"
+                        RowSpacing="10"
+                        Margin="10"
+                        Padding="10">
+                        <Image
+                            Source="fep_square.png"
+                            HeightRequest="80"
+                            HorizontalOptions="Start"
+                            Grid.Row="0"
+                            Grid.Column="0" />
+                        <Image
+                            Source="purlos.png"
+                            HeightRequest="80"
+                            HorizontalOptions="Center"
+                            Grid.Row="0"
+                            Grid.Column="1" />
+                        <Image
+                            Source="hartlepool_college_of_fe.jpg"
+                            HeightRequest="80"
+                            HorizontalOptions="End"
+                            Grid.Row="0"
+                            Grid.Column="2" />
+                    </Grid>
+                    <Label 
+                        Grid.Row="1" 
+                        Grid.Column="0" 
                         Text="Configuration Utility for File Import and Export Tools"
                         FontSize="Title"
                         VerticalOptions="Center" 
                         HorizontalOptions="Center" />
                     <Label 
-                        Grid.Row="1" 
+                        Grid.Row="2" 
                         Grid.Column="0" 
-                        Grid.ColumnSpan="2"
                         Text="Welcome to the Configuration Tool which allows you to generate an appsettings.config file to use with the Export Tool"
                         FontSize="Subtitle"
                         VerticalOptions="Center" 
                         HorizontalOptions="Center" />
                     <Label 
-                    Grid.Row="2" 
-                    Grid.Column="0" 
-                    Grid.ColumnSpan="2"
-                    Text="Cick on the tabs above or buttons below to switch between the different sections and enter information. Test after entry to make sure values were entered correctly."
-                    FontSize="Body"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="Center" />
+                        Grid.Row="3" 
+                        Grid.Column="0" 
+                        Text="Cick on the tabs above or buttons below to switch between the different sections and enter information. Test after entry to make sure values were entered correctly."
+                        FontSize="Body"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
                     <BoxView 
-                    Grid.Row="3"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Margin="0,0,0,20"
-                    HeightRequest="1" />
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Margin="0,0,0,20"
+                        HeightRequest="1" />
 
                     <Label 
-                    Grid.Row="4" 
-                    Grid.Column="0" 
-                    Text="Buttons"
-                    FontSize="Body" />
+                        Grid.Row="5" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        Text="Configure the connection to the database"
+                        FontSize="Body" />
+
+                    <Button 
+                        Grid.Row="6" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        MinimumWidthRequest="260"
+                        Text="Database Settings" 
+                        Clicked="DatabaseSettingsButton_Clicked" />
+                    
+                    <Label 
+                        Grid.Row="7" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        Text="Configure the table, view or stored procedure to export from"
+                        FontSize="Body" />
+
+                    <Button 
+                        Grid.Row="8" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        MinimumWidthRequest="260"
+                        Text="Export Settings" 
+                        Clicked="ExportSettingsButton_Clicked" />
+                    
+                    <Label 
+                        Grid.Row="9" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        Text="Where to save the exported file"
+                        FontSize="Body" />
+
+                    <Button 
+                        Grid.Row="10" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        MinimumWidthRequest="260"
+                        Text="File Settings" 
+                        Clicked="ExportSettingsButton_Clicked" />
+                    
+                    <Label 
+                        Grid.Row="11" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        Text="Where to upload the file to"
+                        FontSize="Body" />
+
+                    <Button 
+                        Grid.Row="12" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        MinimumWidthRequest="260"
+                        Text="FTP Settings" 
+                        Clicked="FTPSettingsButton_Clicked" />
 
                 </Grid>
             </VerticalStackLayout>

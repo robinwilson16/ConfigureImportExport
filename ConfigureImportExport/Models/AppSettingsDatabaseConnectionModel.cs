@@ -1,13 +1,32 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConfigureImportExport.Models
 {
+    [NotMapped]
+    [Keyless]
     public class AppSettingsDatabaseConnectionModel : BaseModel
     {
+        public AppSettingsDatabaseConnectionModel()
+        {
+            Init();
+        }
+
+        public override void Init()
+        {
+            base.Init();
+            Server = string.Empty;
+            Database = string.Empty;
+            UseWindowsAuth = false;
+            Username = string.Empty;
+            Password = string.Empty;
+        }
+
         private string? _Server;
         public string? Server
         {

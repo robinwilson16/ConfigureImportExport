@@ -16,35 +16,64 @@
                     RowSpacing="10"
                     Margin="10"
                     Padding="10">
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        RowDefinitions="Auto"
+                        ColumnDefinitions="*,*,*"
+                        ColumnSpacing="10"
+                        RowSpacing="10"
+                        Margin="10"
+                        Padding="10">
+                        <Image
+                            Source="fep_square.png"
+                            HeightRequest="80"
+                            HorizontalOptions="Start"
+                            Grid.Row="0"
+                            Grid.Column="0" />
+                        <Image
+                            Source="purlos.png"
+                            HeightRequest="80"
+                            HorizontalOptions="Center"
+                            Grid.Row="0"
+                            Grid.Column="1" />
+                        <Image
+                            Source="hartlepool_college_of_fe.jpg"
+                            HeightRequest="80"
+                            HorizontalOptions="End"
+                            Grid.Row="0"
+                            Grid.Column="2" />
+                    </Grid>
                     <Label 
-                        Grid.Row="0" 
+                        Grid.Row="1" 
                         Grid.Column="0" 
                         Text="Configuration Tool for File Export Tools"
                         FontSize="Title"
                         VerticalOptions="Center" 
                         HorizontalOptions="Center" />
                     <Label 
-                        Grid.Row="1" 
+                        Grid.Row="2" 
                         Grid.Column="0" 
                         Text="Developed by Robin Wilson @ Further Education Partnership"
                         FontSize="Subtitle"
                         VerticalOptions="Center" 
                         HorizontalOptions="Center" />
                     <Label 
-                        Grid.Row="2" 
+                        Grid.Row="3" 
                         Grid.Column="0" 
                         Text="Cick on the tabs above to switch between the different sections and enter information. Test after entry to make sure values were entered correctly."
                         FontSize="Body"
                         VerticalOptions="Center" 
                         HorizontalOptions="Center" />
                     <BoxView 
-                        Grid.Row="3"
+                        Grid.Row="4"
                         Grid.Column="0"
                         Margin="0,0,0,20"
                         HeightRequest="1" />
 
                     <Label 
-                        Grid.Row="4" 
+                        Grid.Row="5" 
                         Grid.Column="0" 
                         Text="Copyright © Robin Wilson @ Further Education Partnership (FEP)"
                         FontSize="Body" />

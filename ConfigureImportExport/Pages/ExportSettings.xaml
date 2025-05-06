@@ -10,14 +10,44 @@
             Grid.Row="0">
             <VerticalStackLayout>
                 <Grid 
-                RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
-                ColumnDefinitions="Auto,*"
-                ColumnSpacing="10"
-                RowSpacing="10"
-                Margin="10"
-                Padding="10">
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                    ColumnDefinitions="Auto,*"
+                    ColumnSpacing="10"
+                    RowSpacing="10"
+                    Margin="10"
+                    Padding="10"
+                    x:Name="ExportSettingsGrid">
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        RowDefinitions="Auto"
+                        ColumnDefinitions="*,*,*"
+                        ColumnSpacing="10"
+                        RowSpacing="10"
+                        Margin="10"
+                        Padding="10">
+                        <Image
+                            Source="fep_square.png"
+                            HeightRequest="80"
+                            HorizontalOptions="Start"
+                            Grid.Row="0"
+                            Grid.Column="0" />
+                        <Image
+                            Source="purlos.png"
+                            HeightRequest="80"
+                            HorizontalOptions="Center"
+                            Grid.Row="0"
+                            Grid.Column="1" />
+                        <Image
+                            Source="hartlepool_college_of_fe.jpg"
+                            HeightRequest="80"
+                            HorizontalOptions="End"
+                            Grid.Row="0"
+                            Grid.Column="2" />
+                    </Grid>
                     <Label 
-                    Grid.Row="0" 
+                    Grid.Row="1" 
                     Grid.Column="0" 
                     Grid.ColumnSpan="2"
                     Text="Export Settings"
@@ -25,7 +55,7 @@
                     VerticalOptions="Center" 
                     HorizontalOptions="Center" />
                     <Label 
-                    Grid.Row="1" 
+                    Grid.Row="2" 
                     Grid.Column="0" 
                     Grid.ColumnSpan="2"
                     Text="Specify the export settings below to select the database object to extract the information from where all columns from this table/view/procedure will be exported"
@@ -33,72 +63,77 @@
                     VerticalOptions="Center" 
                     HorizontalOptions="Center" />
                     <BoxView 
-                    Grid.Row="2"
+                    Grid.Row="3"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     Margin="0,0,0,20"
                     HeightRequest="1" />
 
                     <Label 
-                    Grid.Row="3" 
+                    Grid.Row="4" 
                     Grid.Column="0" 
                     Text="Database"
                     FontSize="Body" />
                     <Entry 
-                    Grid.Row="3" 
+                    Grid.Row="4" 
                     Grid.Column="1" 
                     Text="{Binding DatabaseTable.Database}"
-                    Placeholder="e.g. MISystemDatabase" />
+                    Placeholder="e.g. MISystemDatabase" 
+                    TextChanged="OnEntryTextChanged" />
 
                     <Label 
-                    Grid.Row="4" 
+                    Grid.Row="5" 
                     Grid.Column="0" 
                     Text="Schema"
                     FontSize="Body" />
 
                     <VerticalStackLayout
-                    Grid.Row="4" 
+                    Grid.Row="5" 
                     Grid.Column="1">
 
                         <Entry 
                         Text="{Binding DatabaseTable.Schema}" 
-                        Placeholder="e.g. dbo" />
+                        Placeholder="e.g. dbo" 
+                        TextChanged="OnEntryTextChanged" />
                         <Label 
                         Text="The database schema where you are exporting from. Usually dbo"
                         FontSize="Micro" />
                     </VerticalStackLayout>
 
                     <Label 
-                    Grid.Row="5" 
+                    Grid.Row="6" 
                     Grid.Column="0" 
                     Text="Table or View"
                     FontSize="Body" />
 
                     <VerticalStackLayout
-                    Grid.Row="5" 
+                    Grid.Row="6" 
                     Grid.Column="1">
 
-                        <Entry 
-                            Text="{Binding DatabaseTable.TableOrView}" 
-                            Placeholder="e.g. MyTable1" />
+                        <Picker 
+                            x:Name="DatabaseObject"
+                            ItemsSource="{Binding DatabaseTable.DatabaseObject}" 
+                            SelectedItem="{Binding DatabaseTable.TableOrView, Mode=TwoWay}" />
                         <Label 
                         Text="Specify a table or a view here or instead use a stored procedure below which can include parameters"
                         FontSize="Micro" />
                     </VerticalStackLayout>
 
                     <Label 
-                    Grid.Row="6" 
+                    Grid.Row="7" 
                     Grid.Column="0" 
                     Text="Stored Procedure Command"
                     FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="6" 
+                        Grid.Row="7" 
                         Grid.Column="1">
 
-                        <Entry 
-                            Text="{Binding DatabaseTable.StoredProcedureCommand}" 
-                            Placeholder="e.g. SPR_MyProcedure" />
+                        <Picker 
+                            x:Name="StoredProcedureCommand"
+                            ItemsSource="{Binding DatabaseTable.DatabaseStoredProcedure}" 
+                            SelectedItem="{Binding DatabaseTable.StoredProcedureCommand, Mode=TwoWay}"
+                            SelectedIndexChanged="OnStoredProcedureNameChanged"/>
                         <Label 
                             Text="If both the table/view and stored procedure are specified then the stored procedure takes precedence"
                             FontSize="Micro" />
@@ -111,12 +146,12 @@
                     </VerticalStackLayout>
 
                     <Label 
-                        Grid.Row="7" 
+                        Grid.Row="8" 
                         Grid.Column="0" 
                         Text="Number Parameter 1"
                         FontSize="Body" />
                     <Grid 
-                        Grid.Row="7" 
+                        Grid.Row="8" 
                         Grid.Column="1" 
                         RowDefinitions="Auto"
                         ColumnDefinitions="*,*,*,*"
@@ -131,7 +166,8 @@
                             Grid.Row="0" 
                             Grid.Column="1" 
                             Text="{Binding DatabaseTable.StoredProcedureParam1IntegerName}" 
-                            Placeholder="e.g. LastRecordID" />
+                            Placeholder="e.g. LastRecordID" 
+                            TextChanged="OnEntryTextChanged" />
                         <Label 
                             Grid.Row="0" 
                             Grid.Column="2" 
@@ -141,16 +177,17 @@
                             Grid.Row="0" 
                             Grid.Column="3" 
                             Text="{Binding DatabaseTable.StoredProcedureParam1IntegerValue}" 
-                            Placeholder="e.g. 1145" />
+                            Placeholder="e.g. 1145" 
+                            TextChanged="OnEntryTextChanged" />
                     </Grid>
 
                     <Label 
-                        Grid.Row="8" 
+                        Grid.Row="9" 
                         Grid.Column="0" 
                         Text="Number Parameter 2"
                         FontSize="Body" />
                     <Grid 
-                        Grid.Row="8" 
+                        Grid.Row="9" 
                         Grid.Column="1" 
                         RowDefinitions="Auto"
                         ColumnDefinitions="*,*,*,*"
@@ -165,7 +202,8 @@
                             Grid.Row="0" 
                             Grid.Column="1" 
                             Text="{Binding DatabaseTable.StoredProcedureParam2IntegerName}" 
-                            Placeholder="e.g. LastRecordID" />
+                            Placeholder="e.g. LastRecordID" 
+                            TextChanged="OnEntryTextChanged" />
                         <Label 
                             Grid.Row="0" 
                             Grid.Column="2" 
@@ -175,16 +213,17 @@
                             Grid.Row="0" 
                             Grid.Column="3" 
                             Text="{Binding DatabaseTable.StoredProcedureParam2IntegerValue}" 
-                            Placeholder="e.g. 1145" />
+                            Placeholder="e.g. 1145" 
+                            TextChanged="OnEntryTextChanged" />
                     </Grid>
 
                     <Label 
-                        Grid.Row="9" 
+                        Grid.Row="10" 
                         Grid.Column="0" 
                         Text="Text Parameter 1"
                         FontSize="Body" />
                     <Grid 
-                        Grid.Row="9" 
+                        Grid.Row="10" 
                         Grid.Column="1" 
                         RowDefinitions="Auto"
                         ColumnDefinitions="*,*,*,*"
@@ -199,7 +238,8 @@
                             Grid.Row="0" 
                             Grid.Column="1" 
                             Text="{Binding DatabaseTable.StoredProcedureParam1StringName}" 
-                            Placeholder="e.g. AcademicYearID" />
+                            Placeholder="e.g. AcademicYearID" 
+                            TextChanged="OnEntryTextChanged" />
                         <Label 
                             Grid.Row="0" 
                             Grid.Column="2" 
@@ -209,16 +249,17 @@
                             Grid.Row="0" 
                             Grid.Column="3" 
                             Text="{Binding DatabaseTable.StoredProcedureParam1StringValue}" 
-                            Placeholder="e.g. 25/26" />
+                            Placeholder="e.g. 25/26" 
+                            TextChanged="OnEntryTextChanged" />
                     </Grid>
 
                     <Label 
-                        Grid.Row="10" 
+                        Grid.Row="11" 
                         Grid.Column="0" 
                         Text="Text Parameter 2"
                         FontSize="Body" />
                     <Grid 
-                        Grid.Row="10" 
+                        Grid.Row="11" 
                         Grid.Column="1" 
                         RowDefinitions="Auto"
                         ColumnDefinitions="*,*,*,*"
@@ -233,7 +274,8 @@
                             Grid.Row="0" 
                             Grid.Column="1" 
                             Text="{Binding DatabaseTable.StoredProcedureParam2StringName}" 
-                            Placeholder="e.g. AcademicYearID" />
+                            Placeholder="e.g. AcademicYearID" 
+                            TextChanged="OnEntryTextChanged" />
                         <Label 
                             Grid.Row="0" 
                             Grid.Column="2" 
@@ -243,11 +285,12 @@
                             Grid.Row="0" 
                             Grid.Column="3" 
                             Text="{Binding DatabaseTable.StoredProcedureParam2StringValue}" 
-                            Placeholder="e.g. 25/26" />
+                            Placeholder="e.g. 25/26" 
+                            TextChanged="OnEntryTextChanged" />
                     </Grid>
 
                     <FlexLayout
-                    Grid.Row="11" 
+                    Grid.Row="12" 
                     Grid.Column="1" 
                     Wrap="Wrap"
                     Direction="Row">
@@ -256,7 +299,9 @@
                         Padding="0,5,5,5">
                             <Button 
                             x:Name="TestButton"
-                            Text="Test Settings" />
+                            Text="Test Settings" 
+                            Clicked="OnTestButtonClicked"
+                            ImageSource="database_fill_check_white.png" />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout
                         Spacing="5"
@@ -265,20 +310,33 @@
                             x:Name="SaveButton"
                             Text="Save Changes" 
                             Clicked="OnSaveButtonClicked"
-                            ImageSource="floppy.png" />
+                            ImageSource="floppy_fill_white.png" />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout
                         Spacing="5"
                         Padding="5">
                             <Button 
                             x:Name="CancelButton"
-                            Text="Cancel" />
+                            Text="Cancel"
+                            Clicked="OnCancelButtonClicked"
+                            ImageSource="arrow_counterclockwise_white.png" />
                         </HorizontalStackLayout>
                     </FlexLayout>
                 </Grid>
             </VerticalStackLayout>
         </ScrollView>
-
+        
+        <!-- Loading Overlay -->
+        <ContentView IsVisible="{Binding IsLoading}"
+             BackgroundColor="Black"
+             Opacity="0.5"
+             Grid.RowSpan="2">
+            <ActivityIndicator IsRunning="True"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Color="White" />
+        </ContentView>
+        
         <local:FooterPartial
             Grid.Row="1"/>
     </Grid>

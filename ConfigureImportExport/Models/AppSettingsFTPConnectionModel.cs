@@ -1,13 +1,18 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
 
 namespace ConfigureImportExport.Models
 {
+    [NotMapped]
+    [Keyless]
     public class AppSettingsFTPConnectionModel : BaseModel
     {
         public AppSettingsFTPConnectionModel()
@@ -18,14 +23,17 @@ namespace ConfigureImportExport.Models
         {
             base.Init();
             UploadFile = false;
-            Server = string.Empty;
+            Server = "purlos.ftp.uk";
             Type = "SFTP";
             Port = "22";
             Mode = "Passive";
             Username = string.Empty;
             Password = string.Empty;
-            SSHHostKeyFingerprint = string.Empty;
-            FolderPath = string.Empty;
+            SSHHostKeyFingerprint = "ssh-rsa 2048 OrmKW5MkgwECClMuNXjrBAeCh/3u8diPymYxgSrskCE";
+            FolderPath = "inbound";
+
+            // Ensure the TypeOption is set based on the initial Type value
+            TypeOption = FTPConnectionType.FirstOrDefault(option => option.Value == Type);
         }
 
         private bool? _UploadFile;
@@ -56,6 +64,24 @@ namespace ConfigureImportExport.Models
             }
         }
 
+        [JsonIgnore]
+        private FTPConnectionTypeOption? _TypeOption;
+        public FTPConnectionTypeOption? TypeOption
+        {
+            get => _TypeOption;
+            set
+            {
+                if (_TypeOption != value)
+                {
+                    _TypeOption = value;
+                    TriggerPropertyChanged(nameof(TypeOption));
+
+                    // Update the string Type property when the selected option changes
+                    Type = _TypeOption?.Value;
+                }
+            }
+        }
+
         private string? _Type;
         public string? Type
         {
@@ -66,6 +92,9 @@ namespace ConfigureImportExport.Models
                 {
                     _Type = value;
                     TriggerPropertyChanged(nameof(Type));
+
+                    // Update the TypeOption when the string Type changes
+                    TypeOption = FTPConnectionType.FirstOrDefault(option => option.Value == _Type);
                 }
             }
         }
@@ -154,6 +183,7 @@ namespace ConfigureImportExport.Models
             }
         }
 
+        [JsonIgnore]
         public ObservableCollection<FTPConnectionTypeOption> FTPConnectionType { get; set; } = new ObservableCollection<FTPConnectionTypeOption>
         {
             new FTPConnectionTypeOption { DisplayName = "File Transfer Protocol (FTP)", Value = "FTP" },
@@ -162,6 +192,7 @@ namespace ConfigureImportExport.Models
             new FTPConnectionTypeOption { DisplayName = "Secure Copy Protocol (SCP)", Value = "SCP" }
         };
 
+        [JsonIgnore]
         public ObservableCollection<string> FTPConnectionMode { get; set; } = new ObservableCollection<string>
         {
             "Passive",

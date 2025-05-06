@@ -10,7 +10,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace DashboardApp.Services
+namespace ConfigureImportExport.Services
 {
     public class AppSettingsService
     {
@@ -47,7 +47,7 @@ namespace DashboardApp.Services
             return _appSettings;
         }
 
-        public async Task<AppSettingsModel>? Set()
+        public async Task<AppSettingsModel?> Set()
         {
             
             //_appSettings.Version = "1.0.1";
@@ -61,6 +61,9 @@ namespace DashboardApp.Services
             using FileStream outputStream = System.IO.File.OpenWrite(CustomSettingsFilePath);
             using StreamWriter streamWriter = new StreamWriter(outputStream);
             await streamWriter.WriteAsync(JsonSerializer.Serialize(_appSettings, options));
+
+            //Set variable back to false now settings have been saved
+            RuntimeSettingsService.HasUnsavedChanges = false;
             Trace.WriteLine("Saved settings file to: " + CustomSettingsFilePath);
 
             return _appSettings;
@@ -81,7 +84,7 @@ namespace DashboardApp.Services
             using StreamWriter streamWriter = new StreamWriter(outputStream);
             await streamWriter.WriteAsync(JsonSerializer.Serialize(appSettings, options));
             Trace.WriteLine("Saved settings file to: " + CustomSettingsFilePath);
-            System.Diagnostics.Debug.WriteLine("Saved settings file to: " + CustomSettingsFilePath);
+            //Debug.WriteLine("Saved settings file to: " + CustomSettingsFilePath);
 
             return appSettings;
         }

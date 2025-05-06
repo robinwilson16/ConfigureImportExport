@@ -1,13 +1,40 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ConfigureImportExport.Models
 {
+    [NotMapped]
+    [Keyless]
     public class AppSettingsDatabaseTableModel : BaseModel
     {
+        public AppSettingsDatabaseTableModel()
+        {
+            Init();
+        }
+        public override void Init()
+        {
+            base.Init();
+            Database = string.Empty;
+            Schema = "dbo";
+            TableOrView = string.Empty;
+            StoredProcedureCommand = string.Empty;
+            StoredProcedureParam1IntegerName = string.Empty;
+            StoredProcedureParam1IntegerValue = null;
+            StoredProcedureParam2IntegerName = string.Empty;
+            StoredProcedureParam2IntegerValue = null;
+            StoredProcedureParam1StringName = string.Empty;
+            StoredProcedureParam1StringValue = string.Empty;
+            StoredProcedureParam2StringName = string.Empty;
+            StoredProcedureParam2StringValue = string.Empty;
+        }
+
         private string? _Database;
         public string? Database
         {
@@ -175,5 +202,19 @@ namespace ConfigureImportExport.Models
                 }
             }
         }
+
+        [JsonIgnore]
+        public ObservableCollection<string> DatabaseObject { get; set; } = new ObservableCollection<string>
+        {
+            "Table1",
+            "Table2"
+        };
+
+        [JsonIgnore]
+        public ObservableCollection<string> DatabaseStoredProcedure { get; set; } = new ObservableCollection<string>
+        {
+            "Procedure1",
+            "Procedure2"
+        };
     }
 }
