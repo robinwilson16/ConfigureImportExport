@@ -66,6 +66,7 @@ namespace ConfigureImportExport.Models
 
         [JsonIgnore]
         private FTPConnectionTypeOption? _TypeOption;
+        [JsonIgnore]
         public FTPConnectionTypeOption? TypeOption
         {
             get => _TypeOption;

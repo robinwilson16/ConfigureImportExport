@@ -59,9 +59,9 @@ namespace ConfigureImportExport
                 {
                     windowsLifecycleBuilder.OnWindowCreated(window =>
                     {
-                        if (window.Title== "WindowMain")
+                        if (window.Title== "Configuration Utility for File Import and Export Tools")
                         {
-                            //get the Primary window title named "WindowMain"
+                            //get the Primary window title named "Configuration Utility for File Import and Export Tools"
                             var windows = window;
                             //use Microsoft.UI.Windowing functions for window
                             var handle = WinRT.Interop.WindowNative.GetWindowHandle(window);

@@ -10,7 +10,7 @@
             Grid.Row="0">
             <VerticalStackLayout>
                 <Grid 
-                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                     ColumnDefinitions="Auto,*"
                     ColumnSpacing="10"
                     RowSpacing="10"
@@ -68,43 +68,66 @@
                     Margin="0,0,0,20"
                     HeightRequest="1" />
 
+                    <BoxView
+                        x:Name="FileSettingsMessageBox"
+                        Grid.Row="4" 
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        CornerRadius="10" 
+                        BackgroundColor="#fd7e14" />
                     <Label 
-                    Grid.Row="4" 
+                        x:Name="FileSettingsMessage"
+                        Grid.Row="4" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        Text="⚠️ Please specify valid settings on the Database Settings screen first"
+                        TextColor="White"
+                        Margin="10"
+                        HorizontalTextAlignment="Center"
+                        FontSize="Small" />
+
+                    <Label 
+                        x:Name="Folder"
+                    Grid.Row="5" 
                     Grid.Column="0" 
                     Text="Folder on Local Computer"
                     FontSize="Body" />
                     <Entry 
-                    Grid.Row="4" 
+                    Grid.Row="5" 
                     Grid.Column="1" 
                     Text="{Binding CSVFile.Folder}"
                     Placeholder="e.g. C:\\ExportFolder" 
                     TextChanged="OnEntryTextChanged" />
 
                     <Label 
-                        Grid.Row="5" 
+                        Grid.Row="6" 
                         Grid.Column="0" 
                         Text="File Name"
                         FontSize="Body" />
                     <Entry 
-                        Grid.Row="5" 
+                        x:Name="FileName"
+                        Grid.Row="6" 
                         Grid.Column="1" 
                         Text="{Binding CSVFile.FileName}"
+                        BackgroundColor="#cfe2ff"
                         Placeholder="e.g. ExportedFile.csv" 
                         TextChanged="OnEntryTextChanged" />
 
                     <Label 
-                    Grid.Row="6" 
-                    Grid.Column="0" 
-                    Text="Column Name as File Name"
-                    FontSize="Body" />
+                        Grid.Row="7" 
+                        Grid.Column="0" 
+                        Text="Column Name as File Name"
+                        FontSize="Body" />
 
                     <VerticalStackLayout
-                    Grid.Row="6" 
+                    Grid.Row="7" 
                     Grid.Column="1">
 
                         <Entry 
+                            x:Name="ColumnNameAsFileName"
                             Text="{Binding CSVFile.ColumnNameAsFileName}" 
                             Placeholder="e.g. Column1" 
+                            BackgroundColor="#cfe2ff"
                             TextChanged="OnEntryTextChanged" />
                         <Label 
                         Text="Optional and will default to the first value from a specific column column in the file if specified and this column will then be excluded from the file"
@@ -112,16 +135,17 @@
                     </VerticalStackLayout>
 
                     <Label 
-                        Grid.Row="7" 
+                        Grid.Row="8" 
                         Grid.Column="0" 
                         Text="Include Headers"
                         FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="7" 
+                        Grid.Row="8" 
                         Grid.Column="1">
 
                         <CheckBox
+                            x:Name="IncludeHeaders"
                             IsChecked="{Binding CSVFile.IncludeHeaders}" />
                         <Label 
                             Text="If true then adds column names to top row. Normally leave as true"
@@ -129,18 +153,17 @@
                     </VerticalStackLayout>
 
                     <Label 
-                    Grid.Row="8" 
+                    Grid.Row="9" 
                     Grid.Column="0" 
                     Text="Delimiter"
                     FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="8" 
+                        Grid.Row="9" 
                         Grid.Column="1">
 
                         <Entry 
-                            Grid.Row="8" 
-                            Grid.Column="1" 
+                            x:Name="Delimiter"
                             Text="{Binding CSVFile.Delimiter}"
                             Placeholder="e.g. ," 
                             TextChanged="OnEntryTextChanged" />
@@ -150,16 +173,17 @@
                     </VerticalStackLayout>
                     
                     <Label 
-                        Grid.Row="9" 
+                        Grid.Row="10" 
                         Grid.Column="0" 
                         Text="Always Wrap in Speechmarks"
                         FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="9" 
+                        Grid.Row="10" 
                         Grid.Column="1">
 
                         <CheckBox
+                            x:Name="AlwaysWrapInSpeechmarks"
                             IsChecked="{Binding CSVFile.AlwaysWrapInSpeechmarks}" />
                         <Label 
                             Text="To always surround field values with speechmarks regardless of field type - usually false"
@@ -167,7 +191,7 @@
                     </VerticalStackLayout>
 
                     <FlexLayout
-                    Grid.Row="10" 
+                    Grid.Row="11" 
                     Grid.Column="1" 
                     Wrap="Wrap"
                     Direction="Row">
@@ -177,6 +201,7 @@
                             <Button 
                             x:Name="TestButton"
                             Text="Test Settings"
+                            BackgroundColor="#0d6efd"
                             Clicked="OnTestButtonClicked"
                             ImageSource="file_earmark_check_fill_white.png" />
                         </HorizontalStackLayout>
@@ -186,8 +211,19 @@
                             <Button 
                             x:Name="SaveButton"
                             Text="Save Changes" 
+                            BackgroundColor="#198754"
                             Clicked="OnSaveButtonClicked"
                             ImageSource="floppy_fill_white.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="5">
+                            <Button 
+                            x:Name="RunButton"
+                            Text="Run Export Task" 
+                            BackgroundColor="#6610f2"
+                            Clicked="OnRunButtonClicked"
+                            ImageSource="terminal_fill_white.png" />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout
                         Spacing="5"
@@ -195,8 +231,19 @@
                             <Button 
                             x:Name="CancelButton"
                             Text="Cancel"
+                            BackgroundColor="#ffc107"
                             Clicked="OnCancelButtonClicked"
                             ImageSource="arrow_counterclockwise_white.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="5">
+                            <Button 
+                                x:Name="Close"
+                                Text="Close"
+                                BackgroundColor="#dc3545"
+                                Clicked="OnCloseButtonClicked"
+                                ImageSource="x_square_fill_white.png" />
                         </HorizontalStackLayout>
                     </FlexLayout>
                 </Grid>

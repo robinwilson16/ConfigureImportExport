@@ -1,4 +1,4 @@
-using ConfigureImportExport.Data;
+﻿using ConfigureImportExport.Data;
 using ConfigureImportExport.Models;
 using ConfigureImportExport.Services;
 using Microsoft.Maui.Controls;
@@ -17,7 +17,6 @@ public partial class DatabaseSettings : ContentPage
     private readonly AppSettingsService _appSettingsService;
 
     public AppSettingsModel? AppSettings;
-    public bool? DatabaseConnectionValid = false;
 
     public DatabaseSettings(ApplicationDbContext dbContext, ILogger<DatabaseSettings> logger, AppSettingsService appSettingsService)
     {
@@ -29,6 +28,15 @@ public partial class DatabaseSettings : ContentPage
         AppSettings = _appSettingsService?.Get();
 
         BindingContext = AppSettings;
+
+        if (AppSettings != null)
+        {
+            AppSettings.IsLoading = false;
+            AppSettings.DBConnectionValid = false;
+        }
+
+        RuntimeSettingsService.HasUnsavedChanges = false;
+        DisableControls();
 
         UseWindowsAuthChanged();
     }
@@ -71,7 +79,9 @@ public partial class DatabaseSettings : ContentPage
         {
             await App.DBContext.Database.ExecuteSqlRawAsync("SELECT 1");
             await DisplayAlert("Success", "Database connection successful!", "OK");
-            DatabaseConnectionValid = true;
+
+            if (AppSettings != null)
+                AppSettings.DBConnectionValid = true;
         }
         catch (SqlException ex)
         {
@@ -94,10 +104,15 @@ public partial class DatabaseSettings : ContentPage
                 AppSettings.IsLoading = false;
         }
 
-        if (DatabaseConnectionValid == true)
+        if (AppSettings?.DBConnectionValid == true)
         {
             await LoadDatabaseObjects();
             await LoadStoredProcedures();
+            DatabaseConnectionValid();
+        }
+        else
+        {
+            DatabaseConnectionInvalid();
         }
         //try
         //{
@@ -147,6 +162,11 @@ public partial class DatabaseSettings : ContentPage
     }
 
     private async void OnCancelButtonClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("..");
+    }
+
+    private async void OnCloseButtonClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("..");
     }
@@ -225,6 +245,36 @@ public partial class DatabaseSettings : ContentPage
         {
             Debug.WriteLine(ex);
         }
+    }
+
+    public void DatabaseConnectionValid()
+    {
+        MainThread.BeginInvokeOnMainThread(() =>
+        {
+            EnableControls();
+            DatabaseSettingsMessage.Text = "✅ Database settings are valid. Please move to the Export Settings screen.";
+            DatabaseSettingsMessageBox.BackgroundColor = Color.FromArgb("#198754");
+        });
+    }
+
+    public void DatabaseConnectionInvalid()
+    {
+        MainThread.BeginInvokeOnMainThread(() =>
+        {
+            DisableControls();
+            DatabaseSettingsMessage.Text = "⚠️ Database settings are not valid. Please amend and test again.";
+            DatabaseSettingsMessageBox.BackgroundColor = Color.FromArgb("#fd7e14");
+        });
+    }
+
+    public void EnableControls()
+    {
+        SaveButton.IsEnabled = true;
+    }
+
+    public void DisableControls()
+    {
+        SaveButton.IsEnabled = false;
     }
 
     public static void OnEntryTextChanged(object sender, TextChangedEventArgs e)

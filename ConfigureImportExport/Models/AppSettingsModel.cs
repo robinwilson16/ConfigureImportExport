@@ -45,6 +45,7 @@ namespace ConfigureImportExport.Models
 
         [JsonIgnore]
         private bool _IsLoading;
+        [JsonIgnore]
         public bool IsLoading
         {
             get => _IsLoading;
@@ -54,6 +55,38 @@ namespace ConfigureImportExport.Models
                 {
                     _IsLoading = value;
                     TriggerPropertyChanged(nameof(IsLoading));
+                }
+            }
+        }
+
+        [JsonIgnore]
+        private bool _DBConnectionValid;
+        [JsonIgnore]
+        public bool DBConnectionValid
+        {
+            get => _DBConnectionValid;
+            set
+            {
+                if (_DBConnectionValid != value)
+                {
+                    _DBConnectionValid = value;
+                    TriggerPropertyChanged(nameof(DBConnectionValid));
+                }
+            }
+        }
+
+        [JsonIgnore]
+        private bool _FileSettingsValid;
+        [JsonIgnore]
+        public bool FileSettingsValid
+        {
+            get => _FileSettingsValid;
+            set
+            {
+                if (_FileSettingsValid != value)
+                {
+                    _FileSettingsValid = value;
+                    TriggerPropertyChanged(nameof(FileSettingsValid));
                 }
             }
         }

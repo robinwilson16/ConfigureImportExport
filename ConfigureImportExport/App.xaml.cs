@@ -47,7 +47,7 @@ namespace ConfigureImportExport
         {
             //return new Window(new AppShell());
             Window window = new Window(new AppShell());
-            window.Title = "WindowMain";
+            window.Title = "Configuration Utility for File Import and Export Tools";
 
             return window;
         }

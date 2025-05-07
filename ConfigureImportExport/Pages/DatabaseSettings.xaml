@@ -11,7 +11,7 @@
             Grid.Row="0">
             <VerticalStackLayout>
                 <Grid 
-                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                     ColumnDefinitions="Auto,*"
                     ColumnSpacing="10"
                     RowSpacing="10"
@@ -68,31 +68,49 @@
                         Grid.ColumnSpan="2"
                         Margin="0,0,0,20"
                         HeightRequest="1" />
-
-                    <Label 
+                    <BoxView
+                        x:Name="DatabaseSettingsMessageBox"
                         Grid.Row="4" 
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        CornerRadius="10" 
+                        BackgroundColor="#0d6efd" />
+                    <Label 
+                        x:Name="DatabaseSettingsMessage"
+                        Grid.Row="4" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        Text="⚠️ Database settings not yet tested. Please test and then save changes when valid"
+                        TextColor="White"
+                        Margin="10"
+                        HorizontalTextAlignment="Center"
+                        FontSize="Small" />
+                    <Label 
+                        Grid.Row="5" 
                         Grid.Column="0" 
                         Text="Server Name"
                         FontSize="Body" />
                     <Entry 
-                        Grid.Row="4" 
+                        Grid.Row="5" 
                         Grid.Column="1" 
                         Text="{Binding DatabaseConnection.Server}"
+                        BackgroundColor="#cfe2ff"
                         Placeholder="e.g. db01" 
                         TextChanged="OnEntryTextChanged" />
 
                     <Label 
-                        Grid.Row="5" 
+                        Grid.Row="6" 
                         Grid.Column="0" 
                         Text="Database Name"
                         FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="5" 
+                        Grid.Row="6" 
                         Grid.Column="1">
 
                         <Entry 
                             Text="{Binding DatabaseConnection.Database}" 
+                            BackgroundColor="#cfe2ff"
                             Placeholder="e.g. MISystemDatabase" 
                             TextChanged="OnEntryTextChanged" />
                         <Label 
@@ -101,17 +119,18 @@
                     </VerticalStackLayout>
 
                     <Label 
-                        Grid.Row="6" 
+                        Grid.Row="7" 
                         Grid.Column="0" 
                         Text="Use Windows Authentication"
                         FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="6" 
+                        Grid.Row="7" 
                         Grid.Column="1">
 
                         <CheckBox
                             IsChecked="{Binding DatabaseConnection.UseWindowsAuth}" 
+                            BackgroundColor="#cfe2ff"
                             CheckedChanged="OnUseWindowsAuthCheckboxClicked" />
                         <Label 
                             Text="Saves entering a username and password into the config file but the user running the task must have sufficient access to the database"
@@ -119,34 +138,36 @@
                     </VerticalStackLayout>
 
                     <Label 
-                        Grid.Row="7" 
+                        Grid.Row="8" 
                         Grid.Column="0" 
                         Text="Username"
                         FontSize="Body" />
                     <Entry 
-                        Grid.Row="7" 
+                        Grid.Row="8" 
                         Grid.Column="1" 
                         x:Name="Username"
                         Text="{Binding DatabaseConnection.Username}" 
+                        BackgroundColor="#cfe2ff"
                         Placeholder="e.g. dbexportuser" 
                         TextChanged="OnEntryTextChanged" />
 
                     <Label 
-                        Grid.Row="8" 
+                        Grid.Row="9" 
                         Grid.Column="0" 
                         Text="Password"
                         FontSize="Body" />
                     <Entry 
-                        Grid.Row="8" 
+                        Grid.Row="9" 
                         Grid.Column="1" 
                         x:Name="Password"
                         Text="{Binding DatabaseConnection.Password}"
                         IsPassword="True"
+                        BackgroundColor="#cfe2ff"
                         Placeholder="e.g. PasswordHere" 
                         TextChanged="OnEntryTextChanged" />
 
                     <FlexLayout
-                        Grid.Row="9" 
+                        Grid.Row="10" 
                         Grid.Column="1" 
                         Wrap="Wrap"
                         Direction="Row">
@@ -156,6 +177,7 @@
                             <Button 
                                 x:Name="TestButton"
                                 Text="Test Settings" 
+                                BackgroundColor="#0d6efd"
                                 Clicked="OnTestButtonClicked"
                                 ImageSource="database_fill_check_white.png" />
                         </HorizontalStackLayout>
@@ -165,6 +187,7 @@
                             <Button 
                                 x:Name="SaveButton"
                                 Text="Save Changes" 
+                                BackgroundColor="#198754"
                                 Clicked="OnSaveButtonClicked"
                                 ImageSource="floppy_fill_white.png" />
                         </HorizontalStackLayout>
@@ -174,8 +197,19 @@
                             <Button 
                                 x:Name="CancelButton"
                                 Text="Cancel"
+                                BackgroundColor="#ffc107"
                                 Clicked="OnCancelButtonClicked"
                                 ImageSource="arrow_counterclockwise_white.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="5">
+                            <Button 
+                                x:Name="Close"
+                                Text="Close"
+                                BackgroundColor="#dc3545"
+                                Clicked="OnCloseButtonClicked"
+                                ImageSource="x_square_fill_white.png" />
                         </HorizontalStackLayout>
                     </FlexLayout>
                 </Grid>

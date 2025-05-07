@@ -26,4 +26,9 @@ public partial class Welcome : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(Pages.FTPSettings));
     }
+
+    private async void RunButton_Clicked(object sender, EventArgs e)
+    {
+        
+    }
 }

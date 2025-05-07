@@ -48,7 +48,7 @@
                     <Label 
                         Grid.Row="1" 
                         Grid.Column="0" 
-                        Text="Configuration Tool for File Export Tools"
+                        Text="Configuration Utility for File Import and Export Tools"
                         FontSize="Title"
                         VerticalOptions="Center" 
                         HorizontalOptions="Center" />

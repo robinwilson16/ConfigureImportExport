@@ -10,7 +10,7 @@
             Grid.Row="0">
             <VerticalStackLayout>
                 <Grid 
-                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                     ColumnDefinitions="Auto,*"
                     ColumnSpacing="10"
                     RowSpacing="10"
@@ -68,30 +68,49 @@
                     Grid.ColumnSpan="2"
                     Margin="0,0,0,20"
                     HeightRequest="1" />
-
+                    
+                    <BoxView
+                        x:Name="ExportSettingsMessageBox"
+                        Grid.Row="4" 
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        CornerRadius="10" 
+                        BackgroundColor="#fd7e14" />
                     <Label 
-                    Grid.Row="4" 
+                        x:Name="ExportSettingsMessage"
+                        Grid.Row="4" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        Text="⚠️ Please specify valid settings on the Database Settings screen first"
+                        TextColor="White"
+                        Margin="10"
+                        HorizontalTextAlignment="Center"
+                        FontSize="Small" />
+                    <Label 
+                    Grid.Row="5" 
                     Grid.Column="0" 
                     Text="Database"
                     FontSize="Body" />
                     <Entry 
-                    Grid.Row="4" 
+                        x:Name="Database"
+                    Grid.Row="5" 
                     Grid.Column="1" 
                     Text="{Binding DatabaseTable.Database}"
                     Placeholder="e.g. MISystemDatabase" 
                     TextChanged="OnEntryTextChanged" />
 
                     <Label 
-                    Grid.Row="5" 
+                    Grid.Row="6" 
                     Grid.Column="0" 
                     Text="Schema"
                     FontSize="Body" />
 
                     <VerticalStackLayout
-                    Grid.Row="5" 
+                    Grid.Row="6" 
                     Grid.Column="1">
 
                         <Entry 
+                            x:Name="Schema"
                         Text="{Binding DatabaseTable.Schema}" 
                         Placeholder="e.g. dbo" 
                         TextChanged="OnEntryTextChanged" />
@@ -101,39 +120,41 @@
                     </VerticalStackLayout>
 
                     <Label 
-                    Grid.Row="6" 
+                    Grid.Row="7" 
                     Grid.Column="0" 
                     Text="Table or View"
                     FontSize="Body" />
 
                     <VerticalStackLayout
-                    Grid.Row="6" 
+                    Grid.Row="7" 
                     Grid.Column="1">
 
                         <Picker 
                             x:Name="DatabaseObject"
                             ItemsSource="{Binding DatabaseTable.DatabaseObject}" 
-                            SelectedItem="{Binding DatabaseTable.TableOrView, Mode=TwoWay}" />
+                            SelectedItem="{Binding DatabaseTable.TableOrView, Mode=TwoWay}" 
+                            BackgroundColor="#cfe2ff" />
                         <Label 
                         Text="Specify a table or a view here or instead use a stored procedure below which can include parameters"
                         FontSize="Micro" />
                     </VerticalStackLayout>
 
                     <Label 
-                    Grid.Row="7" 
+                    Grid.Row="8" 
                     Grid.Column="0" 
                     Text="Stored Procedure Command"
                     FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="7" 
+                        Grid.Row="8" 
                         Grid.Column="1">
 
                         <Picker 
                             x:Name="StoredProcedureCommand"
                             ItemsSource="{Binding DatabaseTable.DatabaseStoredProcedure}" 
                             SelectedItem="{Binding DatabaseTable.StoredProcedureCommand, Mode=TwoWay}"
-                            SelectedIndexChanged="OnStoredProcedureNameChanged"/>
+                            SelectedIndexChanged="OnStoredProcedureNameChanged" 
+                            BackgroundColor="#cfe2ff" />
                         <Label 
                             Text="If both the table/view and stored procedure are specified then the stored procedure takes precedence"
                             FontSize="Micro" />
@@ -146,12 +167,12 @@
                     </VerticalStackLayout>
 
                     <Label 
-                        Grid.Row="8" 
+                        Grid.Row="9" 
                         Grid.Column="0" 
                         Text="Number Parameter 1"
                         FontSize="Body" />
                     <Grid 
-                        Grid.Row="8" 
+                        Grid.Row="9" 
                         Grid.Column="1" 
                         RowDefinitions="Auto"
                         ColumnDefinitions="*,*,*,*"
@@ -182,12 +203,12 @@
                     </Grid>
 
                     <Label 
-                        Grid.Row="9" 
+                        Grid.Row="10" 
                         Grid.Column="0" 
                         Text="Number Parameter 2"
                         FontSize="Body" />
                     <Grid 
-                        Grid.Row="9" 
+                        Grid.Row="10" 
                         Grid.Column="1" 
                         RowDefinitions="Auto"
                         ColumnDefinitions="*,*,*,*"
@@ -218,12 +239,12 @@
                     </Grid>
 
                     <Label 
-                        Grid.Row="10" 
+                        Grid.Row="11" 
                         Grid.Column="0" 
                         Text="Text Parameter 1"
                         FontSize="Body" />
                     <Grid 
-                        Grid.Row="10" 
+                        Grid.Row="11" 
                         Grid.Column="1" 
                         RowDefinitions="Auto"
                         ColumnDefinitions="*,*,*,*"
@@ -254,12 +275,12 @@
                     </Grid>
 
                     <Label 
-                        Grid.Row="11" 
+                        Grid.Row="12" 
                         Grid.Column="0" 
                         Text="Text Parameter 2"
                         FontSize="Body" />
                     <Grid 
-                        Grid.Row="11" 
+                        Grid.Row="12" 
                         Grid.Column="1" 
                         RowDefinitions="Auto"
                         ColumnDefinitions="*,*,*,*"
@@ -290,25 +311,17 @@
                     </Grid>
 
                     <FlexLayout
-                    Grid.Row="12" 
+                    Grid.Row="13" 
                     Grid.Column="1" 
                     Wrap="Wrap"
                     Direction="Row">
-                        <HorizontalStackLayout
-                        Spacing="5"
-                        Padding="0,5,5,5">
-                            <Button 
-                            x:Name="TestButton"
-                            Text="Test Settings" 
-                            Clicked="OnTestButtonClicked"
-                            ImageSource="database_fill_check_white.png" />
-                        </HorizontalStackLayout>
                         <HorizontalStackLayout
                         Spacing="5"
                         Padding="5">
                             <Button 
                             x:Name="SaveButton"
                             Text="Save Changes" 
+                            BackgroundColor="#198754"
                             Clicked="OnSaveButtonClicked"
                             ImageSource="floppy_fill_white.png" />
                         </HorizontalStackLayout>
@@ -318,8 +331,19 @@
                             <Button 
                             x:Name="CancelButton"
                             Text="Cancel"
+                            BackgroundColor="#ffc107"
                             Clicked="OnCancelButtonClicked"
                             ImageSource="arrow_counterclockwise_white.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="5">
+                            <Button 
+                                x:Name="Close"
+                                Text="Close"
+                                BackgroundColor="#dc3545"
+                                Clicked="OnCloseButtonClicked"
+                                ImageSource="x_square_fill_white.png" />
                         </HorizontalStackLayout>
                     </FlexLayout>
                 </Grid>

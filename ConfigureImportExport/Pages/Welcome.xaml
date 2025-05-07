@@ -10,7 +10,7 @@
             Grid.Row="0">
             <VerticalStackLayout>
                 <Grid 
-                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                     ColumnDefinitions="*"
                     ColumnSpacing="10"
                     RowSpacing="10"
@@ -85,7 +85,9 @@
                         HorizontalOptions="Center"
                         MinimumWidthRequest="260"
                         Text="Database Settings" 
-                        Clicked="DatabaseSettingsButton_Clicked" />
+                        BackgroundColor="#0dcaf0"
+                        Clicked="DatabaseSettingsButton_Clicked" 
+                        ImageSource="database_fill_gear_white.png" />
                     
                     <Label 
                         Grid.Row="7" 
@@ -100,7 +102,9 @@
                         HorizontalOptions="Center"
                         MinimumWidthRequest="260"
                         Text="Export Settings" 
-                        Clicked="ExportSettingsButton_Clicked" />
+                        BackgroundColor="#20c997"
+                        Clicked="ExportSettingsButton_Clicked"
+                        ImageSource="list_columns_white.png" />
                     
                     <Label 
                         Grid.Row="9" 
@@ -115,7 +119,9 @@
                         HorizontalOptions="Center"
                         MinimumWidthRequest="260"
                         Text="File Settings" 
-                        Clicked="ExportSettingsButton_Clicked" />
+                        BackgroundColor="#0d6efd"
+                        Clicked="ExportSettingsButton_Clicked"
+                        ImageSource="file_earmark_spreadsheet_fill_white.png" />
                     
                     <Label 
                         Grid.Row="11" 
@@ -130,7 +136,26 @@
                         HorizontalOptions="Center"
                         MinimumWidthRequest="260"
                         Text="FTP Settings" 
-                        Clicked="FTPSettingsButton_Clicked" />
+                        BackgroundColor="#d63384"
+                        Clicked="FTPSettingsButton_Clicked"
+                        ImageSource="cloud_arrow_up_fill_white.png" />
+                    
+                    <Label 
+                        Grid.Row="13" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        Text="Run the task to export the file once configured"
+                        FontSize="Body" />
+
+                    <Button 
+                        Grid.Row="14" 
+                        Grid.Column="0" 
+                        HorizontalOptions="Center"
+                        MinimumWidthRequest="260"
+                        Text="Run Export Task" 
+                        BackgroundColor="#6610f2"
+                        Clicked="RunButton_Clicked"
+                        ImageSource="terminal_fill_white.png" />
 
                 </Grid>
             </VerticalStackLayout>

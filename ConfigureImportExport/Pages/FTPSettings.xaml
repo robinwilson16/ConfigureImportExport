@@ -10,7 +10,7 @@
             Grid.Row="0">
             <VerticalStackLayout>
                 <Grid 
-                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                     ColumnDefinitions="Auto,*"
                     ColumnSpacing="10"
                     RowSpacing="10"
@@ -67,19 +67,39 @@
                         Grid.ColumnSpan="2"
                         Margin="0,0,0,20"
                         HeightRequest="1" />
-
-                    <Label 
+                    
+                    <BoxView
+                        x:Name="FTPSettingsMessageBox"
                         Grid.Row="4" 
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        CornerRadius="10" 
+                        BackgroundColor="#fd7e14" />
+                    <Label 
+                        x:Name="FTPSettingsMessage"
+                        Grid.Row="4" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        Text="⚠️ Please specify valid settings on the Database Settings screen first"
+                        TextColor="White"
+                        Margin="10"
+                        HorizontalTextAlignment="Center"
+                        FontSize="Small" />
+                    
+                    <Label 
+                        Grid.Row="5" 
                         Grid.Column="0" 
                         Text="Upload File"
                         FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="4" 
+                        Grid.Row="5" 
                         Grid.Column="1">
 
                         <CheckBox
+                            x:Name="UploadFile"
                             IsChecked="{Binding FTPConnection.UploadFile}" 
+                            BackgroundColor="#cfe2ff"
                             CheckedChanged="OnUploadCheckboxClicked" />
                         <Label 
                             Text="If not ticked then the file will only be generated locally and not uploaded to the FTP. May be useful for inital testing or you may not need to upload the generated file anywhere external."
@@ -87,13 +107,13 @@
                     </VerticalStackLayout>
 
                     <Label 
-                        Grid.Row="5" 
+                        Grid.Row="6" 
                         Grid.Column="0" 
                         Text="FTP Server"
                         FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="5" 
+                        Grid.Row="6" 
                         Grid.Column="1">
 
                         <Entry 
@@ -107,12 +127,12 @@
                     </VerticalStackLayout>
 
                     <Label 
-                        Grid.Row="6" 
+                        Grid.Row="7" 
                         Grid.Column="0" 
                         Text="Type"
                         FontSize="Body" />
                     <Picker 
-                        Grid.Row="6" 
+                        Grid.Row="7" 
                         Grid.Column="1" 
                         x:Name="Type"
                         ItemsSource="{Binding FTPConnection.FTPConnectionType}" 
@@ -120,12 +140,12 @@
                         SelectedItem="{Binding FTPConnection.TypeOption, Mode=TwoWay}" />
 
                     <Label 
-                        Grid.Row="7" 
+                        Grid.Row="8" 
                         Grid.Column="0" 
                         Text="Port"
                         FontSize="Body" />
                     <VerticalStackLayout
-                        Grid.Row="7" 
+                        Grid.Row="8" 
                         Grid.Column="1">
 
                         <Entry 
@@ -139,52 +159,54 @@
                     </VerticalStackLayout>
                     
                     <Label 
-                        Grid.Row="8" 
+                        Grid.Row="9" 
                         Grid.Column="0" 
                         Text="Mode"
                         FontSize="Body" />
                     <Picker 
-                        Grid.Row="8" 
+                        Grid.Row="9" 
                         Grid.Column="1" 
                         x:Name="Mode"
                         ItemsSource="{Binding FTPConnection.FTPConnectionMode}" 
                         SelectedItem="{Binding FTPConnection.Mode, Mode=TwoWay}" />
 
                     <Label 
-                        Grid.Row="9" 
+                        Grid.Row="10" 
                         Grid.Column="0" 
                         Text="FTP Username"
                         FontSize="Body" />
                     <Entry 
-                        Grid.Row="9" 
+                        Grid.Row="10" 
                         Grid.Column="1" 
                         x:Name="Username"
                         Text="{Binding FTPConnection.Username}"
+                        BackgroundColor="#cfe2ff"
                         Placeholder="e.g. ftpuser1" 
                         TextChanged="OnEntryTextChanged" />
 
                     <Label 
-                        Grid.Row="10" 
+                        Grid.Row="11" 
                         Grid.Column="0" 
                         Text="FTP Password"
                         FontSize="Body" />
                     <Entry 
-                        Grid.Row="10" 
+                        Grid.Row="11" 
                         Grid.Column="1" 
                         x:Name="Password"
                         IsPassword="True"
                         Text="{Binding FTPConnection.Password}"
+                        BackgroundColor="#cfe2ff"
                         Placeholder="e.g. PasswordHere" 
                         TextChanged="OnEntryTextChanged" />
 
                     <Label 
-                        Grid.Row="11" 
+                        Grid.Row="12" 
                         Grid.Column="0" 
                         Text="SSHHostKeyFingerprint"
                         FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="11" 
+                        Grid.Row="12" 
                         Grid.Column="1">
 
                         <Entry 
@@ -198,13 +220,13 @@
                     </VerticalStackLayout>
 
                     <Label 
-                        Grid.Row="12" 
+                        Grid.Row="13" 
                         Grid.Column="0" 
                         Text="Folder Path"
                         FontSize="Body" />
 
                     <VerticalStackLayout
-                        Grid.Row="12" 
+                        Grid.Row="13" 
                         Grid.Column="1">
 
                         <Entry 
@@ -218,7 +240,7 @@
                     </VerticalStackLayout>
 
                     <FlexLayout
-                        Grid.Row="13" 
+                        Grid.Row="14" 
                         Grid.Column="1" 
                         Wrap="Wrap"
                         Direction="Row">
@@ -228,6 +250,7 @@
                             <Button 
                             x:Name="TestButton"
                             Text="Test Settings" 
+                            BackgroundColor="#0d6efd"
                             Clicked="OnTestButtonClicked"
                             ImageSource="cloud_check_fill_white.png" />
                         </HorizontalStackLayout>
@@ -237,8 +260,19 @@
                             <Button 
                             x:Name="SaveButton"
                             Text="Save Changes" 
+                            BackgroundColor="#198754"
                             Clicked="OnSaveButtonClicked"
                             ImageSource="floppy_fill_white.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="5">
+                            <Button 
+                            x:Name="RunButton"
+                            Text="Run Export Task" 
+                            BackgroundColor="#6610f2"
+                            Clicked="OnRunButtonClicked"
+                            ImageSource="terminal_fill_white.png" />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout
                         Spacing="5"
@@ -246,8 +280,19 @@
                             <Button 
                             x:Name="CancelButton"
                             Text="Cancel"
+                            BackgroundColor="#ffc107"
                             Clicked="OnCancelButtonClicked"
                             ImageSource="arrow_counterclockwise_white.png" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="5"
+                            Padding="5">
+                            <Button 
+                                x:Name="Close"
+                                Text="Close"
+                                BackgroundColor="#dc3545"
+                                Clicked="OnCloseButtonClicked"
+                                ImageSource="x_square_fill_white.png" />
                         </HorizontalStackLayout>
                     </FlexLayout>
                 </Grid>

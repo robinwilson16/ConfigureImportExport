@@ -1,8 +1,9 @@
-using ConfigureImportExport.Data;
+﻿using ConfigureImportExport.Data;
 using ConfigureImportExport.Models;
 using ConfigureImportExport.Services;
 using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Storage;
 using System.Diagnostics;
 using System.Text.Json;
 using WinSCP;
@@ -27,6 +28,18 @@ public partial class FTPSettings : ContentPage
         AppSettings = _appSettingsService?.Get();
 
         BindingContext = AppSettings;
+
+        if (AppSettings != null)
+            AppSettings.IsLoading = false;
+
+        RuntimeSettingsService.HasUnsavedChanges = false;
+
+        if (AppSettings != null)
+            if (AppSettings.DBConnectionValid == true)
+                DatabaseConnectionValid();
+            else
+                DatabaseConnectionInvalid();
+
         UploadCheckboxChanged();
     }
 
@@ -175,7 +188,17 @@ public partial class FTPSettings : ContentPage
             AppSettings.IsLoading = false;
     }
 
+    private async void OnRunButtonClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("..");
+    }
+
     private async void OnCancelButtonClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("..");
+    }
+
+    private async void OnCloseButtonClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("..");
     }
@@ -210,6 +233,38 @@ public partial class FTPSettings : ContentPage
                 TestButton.IsEnabled = false;
             }
         }
+    }
+
+    public void DatabaseConnectionValid()
+    {
+        MainThread.BeginInvokeOnMainThread(() =>
+        {
+            EnableControls();
+            FTPSettingsMessage.Text = "✅ Database settings are valid. Please specify the database object below to use";
+            FTPSettingsMessageBox.BackgroundColor = Color.FromArgb("#198754");
+        });
+    }
+
+    public void DatabaseConnectionInvalid()
+    {
+        MainThread.BeginInvokeOnMainThread(() =>
+        {
+            DisableControls();
+            FTPSettingsMessage.Text = "⚠️ Please specify valid settings on the Database Settings screen first";
+            FTPSettingsMessageBox.BackgroundColor = Color.FromArgb("#fd7e14");
+        });
+    }
+
+    public void EnableControls()
+    {
+        UploadFile.IsEnabled = true;
+        SaveButton.IsEnabled = true;
+    }
+
+    public void DisableControls()
+    {
+        UploadFile.IsEnabled = false;
+        SaveButton.IsEnabled = false;
     }
 
     public static void OnEntryTextChanged(object sender, TextChangedEventArgs e)

@@ -13,11 +13,14 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConfigureImportExport")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+fee8f55355109042f7cf9396f488b6d6f393fcdd")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("Robin Wilson")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Configuration Utility for File Import and Export Tools")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+5de2dbda76826dba93bf0cc49977b0da1129eb74")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConfigureImportExport")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConfigureImportExport")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.9")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/robinwilson16/ConfigureImportExport")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Android35.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Android21.0")]
 
