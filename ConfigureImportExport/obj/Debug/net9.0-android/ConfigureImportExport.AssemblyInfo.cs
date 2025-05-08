@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Robin Wilson")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Configuration Utility for File Import and Export Tools")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.9")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+5de2dbda76826dba93bf0cc49977b0da1129eb74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+bbd2ad97b5f56d167c42552246ff586c2cf1fc65")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConfigureImportExport")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConfigureImportExport")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.9")]

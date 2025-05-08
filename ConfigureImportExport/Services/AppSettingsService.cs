@@ -27,7 +27,7 @@ namespace ConfigureImportExport.Services
                 ReadCommentHandling = JsonCommentHandling.Skip
             };
 
-            CustomSettingsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, CustomSettingsFileName);
+            CustomSettingsFilePath = System.IO.Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), CustomSettingsFileName);
             if (System.IO.File.Exists(CustomSettingsFilePath))
             {
                 using FileStream inputStream = System.IO.File.OpenRead(CustomSettingsFilePath);
@@ -57,7 +57,7 @@ namespace ConfigureImportExport.Services
                 WriteIndented = true
             };
 
-            CustomSettingsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, CustomSettingsFileName);
+            CustomSettingsFilePath = System.IO.Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), CustomSettingsFileName);
             using FileStream outputStream = System.IO.File.OpenWrite(CustomSettingsFilePath);
             using StreamWriter streamWriter = new StreamWriter(outputStream);
             await streamWriter.WriteAsync(JsonSerializer.Serialize(_appSettings, options));
@@ -79,7 +79,7 @@ namespace ConfigureImportExport.Services
                 WriteIndented = true
             };
 
-            CustomSettingsFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, CustomSettingsFileName);
+            CustomSettingsFilePath = System.IO.Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), CustomSettingsFileName);
             using FileStream outputStream = System.IO.File.OpenWrite(CustomSettingsFilePath);
             using StreamWriter streamWriter = new StreamWriter(outputStream);
             await streamWriter.WriteAsync(JsonSerializer.Serialize(appSettings, options));

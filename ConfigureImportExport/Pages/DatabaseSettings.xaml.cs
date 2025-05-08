@@ -29,13 +29,6 @@ public partial class DatabaseSettings : ContentPage
 
         BindingContext = AppSettings;
 
-        if (AppSettings != null)
-        {
-            AppSettings.IsLoading = false;
-            AppSettings.DBConnectionValid = false;
-        }
-
-        RuntimeSettingsService.HasUnsavedChanges = false;
         DisableControls();
 
         UseWindowsAuthChanged();

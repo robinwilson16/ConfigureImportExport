@@ -25,11 +25,6 @@ public partial class ExportSettings : ContentPage
         BindingContext = AppSettings;
 
         if (AppSettings != null)
-            AppSettings.IsLoading = false;
-
-        RuntimeSettingsService.HasUnsavedChanges = false;
-
-        if (AppSettings != null)
             if (AppSettings.DBConnectionValid == true)
                 DatabaseConnectionValid();
             else
@@ -104,7 +99,7 @@ public partial class ExportSettings : ContentPage
         MainThread.BeginInvokeOnMainThread(() =>
         {
             EnableControls();
-            ExportSettingsMessage.Text = "✅ Database settings are valid. Please specify the database object below to use";
+            ExportSettingsMessage.Text = "✅ Database settings are valid. Please specify details of the database object (table/view/procedure) to use";
             ExportSettingsMessageBox.BackgroundColor = Color.FromArgb("#198754");
         });
     }

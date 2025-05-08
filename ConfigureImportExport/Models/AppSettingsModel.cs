@@ -30,6 +30,10 @@ namespace ConfigureImportExport.Models
             DatabaseTable = new AppSettingsDatabaseTableModel();
             CSVFile = new AppSettingsCSVFileModel();
             FTPConnection = new AppSettingsFTPConnectionModel();
+            IsLoading = false;
+            DBConnectionValid = false;
+            FileSettingsValid = false;
+            FTPSettingsValid = false;
         }
 
         public string? Version { get; set; }
@@ -87,6 +91,22 @@ namespace ConfigureImportExport.Models
                 {
                     _FileSettingsValid = value;
                     TriggerPropertyChanged(nameof(FileSettingsValid));
+                }
+            }
+        }
+
+        [JsonIgnore]
+        private bool _FTPSettingsValid;
+        [JsonIgnore]
+        public bool FTPSettingsValid
+        {
+            get => _FTPSettingsValid;
+            set
+            {
+                if (_FTPSettingsValid != value)
+                {
+                    _FTPSettingsValid = value;
+                    TriggerPropertyChanged(nameof(FTPSettingsValid));
                 }
             }
         }

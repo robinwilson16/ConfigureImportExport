@@ -39,14 +39,15 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-		<AssemblyVersion>1.0.9</AssemblyVersion>
-		<FileVersion>1.0.9</FileVersion>
+		<AssemblyVersion>1.0.10</AssemblyVersion>
+		<FileVersion>1.0.10</FileVersion>
 		<Title>Configuration Utility for File Import and Export Tools</Title>
 		<Copyright>Robin Wilson</Copyright>
 		<Description>Configuration Utility for File Import and Export Tools</Description>
 		<PackageProjectUrl>https://github.com/robinwilson16/ConfigureImportExport</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/robinwilson16/ConfigureImportExport</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
+		<Platforms>AnyCPU;x64;ARM64</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -77,8 +77,8 @@ namespace ConfigureImportExport
                                     //get all of Microsoft.Maui.Controls.windows.
                                     var windows1 = Application.Current.Windows.ToList<Microsoft.Maui.Controls.Window>();
                                     foreach (Window win in windows1) {
-                                        //get the Primary window title named "WindowMain"
-                                        if (win.Title== "WindowMain")
+                                        //get the Primary window title named "Configuration Utility for File Import and Export Tools"
+                                        if (win.Title== "Configuration Utility for File Import and Export Tools")
                                         {                    
                                             bool result = await win.Page.DisplayAlert(
                                             "Unsaved Changes",
