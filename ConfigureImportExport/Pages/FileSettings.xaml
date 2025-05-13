@@ -253,13 +253,22 @@
         <!-- Loading Overlay -->
         <ContentView IsVisible="{Binding IsLoading}"
              BackgroundColor="Black"
-             Opacity="0.5"
+             Opacity="0.7"
              Grid.RowSpan="2">
-            <ActivityIndicator IsRunning="True"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center"
-                       Color="White" />
+            <VerticalStackLayout VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Spacing="20">
+                <ActivityIndicator IsRunning="True"
+                    Color="White"
+                    WidthRequest="50"
+                    HeightRequest="50" />
+                <Label Text="Please wait..."
+                    TextColor="White"
+                    FontSize="Medium"
+                    HorizontalOptions="Center" />
+            </VerticalStackLayout>
         </ContentView>
+        <!-- Loading Overlay -->
         
         <local:FooterPartial
             Grid.Row="1"/>

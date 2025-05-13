@@ -39,8 +39,8 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-		<AssemblyVersion>1.0.10</AssemblyVersion>
-		<FileVersion>1.0.10</FileVersion>
+		<AssemblyVersion>1.1.0</AssemblyVersion>
+		<FileVersion>1.1.0</FileVersion>
 		<Title>Configuration Utility for File Import and Export Tools</Title>
 		<Copyright>Robin Wilson</Copyright>
 		<Description>Configuration Utility for File Import and Export Tools</Description>
@@ -85,12 +85,15 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.4" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.60" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.4" />
-		<PackageReference Include="WinSCP" Version="6.5.0" />
+		<PackageReference Include="WinSCP" Version="6.5.1" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Compile Update="Pages\FileSettings.xaml.cs">
 	    <DependentUpon>FileSettings.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\RunExportTask.xaml.cs">
+	    <DependentUpon>RunExportTask.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -113,9 +116,30 @@
 	  <MauiXaml Update="Pages\FTPSettings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\RunExportTask.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Welcome.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="CSVSQLExporter.exe">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="WinSCP.exe">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+  <!-- Needed for copying WinSCP.exe as is already a resource in this project-->
+  <PropertyGroup>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+	
+  <!-- Embed PDB file into .exe for single file publish-->
+  <PropertyGroup>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
 </Project>

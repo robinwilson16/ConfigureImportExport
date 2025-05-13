@@ -49,6 +49,13 @@
             <ShellContent ContentTemplate="{DataTemplate Pages:FTPSettings}" x:Name="TabFTPSettingsContent"/>
         </Tab>
         <Tab 
+            Title="Run Export Task"
+            Icon="terminal_fill.png"
+            x:Name="TabRunExportTask"
+            >
+            <ShellContent ContentTemplate="{DataTemplate Pages:RunExportTask}" x:Name="TabRunExportTaskContent"/>
+        </Tab>
+        <Tab 
             Title="About"
             Icon="question_circle_fill.png"
             x:Name="TabAbout"

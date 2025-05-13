@@ -27,8 +27,8 @@ namespace ConfigureImportExport.Services
                 ReadCommentHandling = JsonCommentHandling.Skip
             };
 
-            CustomSettingsFilePath = System.IO.Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), CustomSettingsFileName);
-            if (System.IO.File.Exists(CustomSettingsFilePath))
+            CustomSettingsFilePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), CustomSettingsFileName);
+            if (File.Exists(CustomSettingsFilePath))
             {
                 using FileStream inputStream = System.IO.File.OpenRead(CustomSettingsFilePath);
                 using StreamReader streamReader = new StreamReader(inputStream);

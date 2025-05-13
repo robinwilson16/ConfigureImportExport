@@ -2146,7 +2146,7 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "WinSCP/6.5.0": {
+      "WinSCP/6.5.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/WinSCPnet.dll": {}
@@ -4233,7 +4233,7 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "WinSCP/6.5.0": {
+      "WinSCP/6.5.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/WinSCPnet.dll": {}
@@ -8814,10 +8814,10 @@
         "version.txt"
       ]
     },
-    "WinSCP/6.5.0": {
-      "sha512": "aQhlg+zbT60rFGUoR6QT4vddpHFwKSi7rk8OMdtwCL7aWuH7BnQTxdCF4eAuHR5zcuR337z08a7gD1Wik29A4g==",
+    "WinSCP/6.5.1": {
+      "sha512": "JpULIWsrTgJ2SCxbVblDeU1pOipj9SH+tANkbie10EsEGz6EwNDmraLsPH3YwYIcObj+wvPWmL+HWUALzD8Bjg==",
       "type": "package",
-      "path": "winscp/6.5.0",
+      "path": "winscp/6.5.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -8828,7 +8828,7 @@
         "lib/net40/WinSCPnet.dll",
         "lib/netstandard2.0/WinSCPnet.dll",
         "tools/WinSCP.exe",
-        "winscp.6.5.0.nupkg.sha512",
+        "winscp.6.5.1.nupkg.sha512",
         "winscp.nuspec",
         "winscp64.png"
       ]
@@ -8847,7 +8847,7 @@
       "Microsoft.Extensions.Logging.Debug >= 9.0.4",
       "Microsoft.Maui.Controls >= 9.0.60",
       "Microsoft.NET.ILLink.Tasks >= 9.0.4",
-      "WinSCP >= 6.5.0"
+      "WinSCP >= 6.5.1"
     ]
   },
   "packageFolders": {
@@ -8954,7 +8954,7 @@
           },
           "WinSCP": {
             "target": "Package",
-            "version": "[6.5.0, )"
+            "version": "[6.5.1, )"
           }
         },
         "imports": [

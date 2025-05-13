@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ConfigureImportExport.Pages.Welcome"
-             Title="Welcome to the Configuration Utility for File Import and Export Tools"
+             x:Class="ConfigureImportExport.Pages.RunExportTask"
+             Title="Run The Export Task"
              Shell.NavBarIsVisible="False"
              xmlns:local="clr-namespace:ConfigureImportExport.Pages">
     <Grid RowDefinitions="*,Auto">
@@ -10,7 +10,7 @@
             Grid.Row="0">
             <VerticalStackLayout>
                 <Grid 
-                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                     ColumnDefinitions="*"
                     ColumnSpacing="10"
                     RowSpacing="10"
@@ -76,7 +76,7 @@
                         Grid.Row="5" 
                         Grid.Column="0" 
                         HorizontalOptions="Center"
-                        Text="Configure the connection to the database"
+                        Text="Run the task to export the file once everything is configured on the previous tabs"
                         FontSize="Body" />
 
                     <Button 
@@ -84,78 +84,11 @@
                         Grid.Column="0" 
                         HorizontalOptions="Center"
                         MinimumWidthRequest="260"
-                        Text="Database Settings" 
-                        BackgroundColor="#0dcaf0"
-                        Clicked="DatabaseSettingsButton_Clicked" 
-                        ImageSource="database_fill_gear_white.png" />
-                    
-                    <Label 
-                        Grid.Row="7" 
-                        Grid.Column="0" 
-                        HorizontalOptions="Center"
-                        Text="Configure the table, view or stored procedure to export from"
-                        FontSize="Body" />
-
-                    <Button 
-                        Grid.Row="8" 
-                        Grid.Column="0" 
-                        HorizontalOptions="Center"
-                        MinimumWidthRequest="260"
-                        Text="Export Settings" 
-                        BackgroundColor="#20c997"
-                        Clicked="ExportSettingsButton_Clicked"
-                        ImageSource="list_columns_white.png" />
-                    
-                    <Label 
-                        Grid.Row="9" 
-                        Grid.Column="0" 
-                        HorizontalOptions="Center"
-                        Text="Where to save the exported file"
-                        FontSize="Body" />
-
-                    <Button 
-                        Grid.Row="10" 
-                        Grid.Column="0" 
-                        HorizontalOptions="Center"
-                        MinimumWidthRequest="260"
-                        Text="File Settings" 
-                        BackgroundColor="#0d6efd"
-                        Clicked="ExportSettingsButton_Clicked"
-                        ImageSource="file_earmark_spreadsheet_fill_white.png" />
-                    
-                    <Label 
-                        Grid.Row="11" 
-                        Grid.Column="0" 
-                        HorizontalOptions="Center"
-                        Text="Where to upload the file to"
-                        FontSize="Body" />
-
-                    <Button 
-                        Grid.Row="12" 
-                        Grid.Column="0" 
-                        HorizontalOptions="Center"
-                        MinimumWidthRequest="260"
-                        Text="FTP Settings" 
-                        BackgroundColor="#d63384"
-                        Clicked="FTPSettingsButton_Clicked"
-                        ImageSource="cloud_arrow_up_fill_white.png" />
-                    
-                    <Label 
-                        Grid.Row="13" 
-                        Grid.Column="0" 
-                        HorizontalOptions="Center"
-                        Text="Run the task to export the file once configured"
-                        FontSize="Body" />
-
-                    <Button 
-                        Grid.Row="14" 
-                        Grid.Column="0" 
-                        HorizontalOptions="Center"
-                        MinimumWidthRequest="260"
                         Text="Run Export Task" 
-                        BackgroundColor="#6610f2"
+                        FontSize="Large"
+                        BackgroundColor="#198754"
                         Clicked="RunButton_Clicked"
-                        ImageSource="terminal_fill_white.png" />
+                        ImageSource="terminal_fill_large_white.png" />
 
                 </Grid>
             </VerticalStackLayout>
