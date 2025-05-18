@@ -28,6 +28,11 @@ public partial class FTPSettings : ContentPage
         AppSettings = _appSettingsService?.Get();
 
         BindingContext = AppSettings;
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
 
         if (AppSettings != null)
             if (AppSettings.DBConnectionValid == true)
@@ -36,13 +41,6 @@ public partial class FTPSettings : ContentPage
                 DatabaseConnectionInvalid();
 
         UploadCheckboxChanged();
-    }
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-        //Code here
     }
 
     private async void OnUploadCheckboxClicked(object sender, CheckedChangedEventArgs e)
@@ -110,12 +108,22 @@ public partial class FTPSettings : ContentPage
                 break;
         }
 
+        string uploadPath = Path.Combine("/", AppSettings?.FTPConnection?.FolderPath ?? "");
+
+        if (uploadPath.Substring(uploadPath.Length - 1) != "/")
+        {
+            uploadPath = uploadPath + "/";
+        }
+
         try
         {
-            TestFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "FTPTestFile.txt");
-            using FileStream outputStream = System.IO.File.OpenWrite(TestFilePath);
+            TestFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "FTPTestFile.txt");
+            using FileStream outputStream = File.OpenWrite(TestFilePath);
             using StreamWriter streamWriter = new StreamWriter(outputStream);
             await streamWriter.WriteAsync("Test file for checking FTP access");
+            await streamWriter.DisposeAsync();
+            await outputStream.DisposeAsync();
+
             Trace.WriteLine("Saved test file to: " + TestFilePath);
             //Debug.WriteLine("Saved test file to: " + TestFilePath);
         }
@@ -127,6 +135,9 @@ public partial class FTPSettings : ContentPage
             await DisplayAlert("Error", $"An unexpected error occurred generating test file to upload to FTP. Please ensure you are running this program from a folder you have full access to.\r\nUnexpected error:\r\n{ex.Message}", "OK");
         }
 
+        bool? uploadSuccessful = false;
+        bool? removalSuccessful = false;
+        bool? deleteSuccessful = false;
         try
         {
             using (Session session = new Session())
@@ -143,7 +154,7 @@ public partial class FTPSettings : ContentPage
 
                 TransferOperationResult transferResult;
                 transferResult =
-                    session.PutFiles(TestFilePath, AppSettings?.FTPConnection?.FolderPath, false, transferOptions);
+                    session.PutFiles(TestFilePath, uploadPath, false, transferOptions);
 
                 // Throw on any error
                 transferResult.Check();
@@ -156,12 +167,44 @@ public partial class FTPSettings : ContentPage
             }
 
             Console.WriteLine($"File Uploaded to {sessionOptions.HostName} to {TestFilePath}");
+            uploadSuccessful = true;
+
+            //Now attempt to delete the test file from the FTP server
+            using (Session session = new Session())
+            {
+                //When publishing to a self-contained exe file need to specify the location of WinSCP.exe
+                session.ExecutablePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "WinSCP.exe");
+                // Connect
+                session.Open(sessionOptions);
+                // Delete files
+                RemovalOperationResult transferResult;
+                transferResult =
+                    session.RemoveFiles(uploadPath + "FTPTestFile.txt");
+                // Throw on any error
+                transferResult.Check();
+                // Print results
+                foreach (RemovalEventArgs transfer in transferResult.Removals)
+                {
+                    Console.WriteLine("Delete of {0} succeeded", transfer.FileName);
+                }
+            }
+
+            removalSuccessful = true;
+
+            File.Delete(TestFilePath); // Delete the test file after checking
+            deleteSuccessful = true;
+
             await DisplayAlert("Success", "FTP connection successful!", "OK");
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Unexpected error: {ex.Message}");
-            await DisplayAlert("Error", $"An unexpected error occurred. Please try again.\r\nUnexpected error:\r\n{ex.Message}", "OK");
+            if (uploadSuccessful == true && removalSuccessful == false)
+                await DisplayAlert("Success", $"FTP connection successful!.\r\nHowever the test file uploaded to the FTP could not be removed again\r\nYou may remove \"FTPTestFile.txt\" manually\r\nUnexpected error:\r\n{ex.Message}", "OK");
+            else if (uploadSuccessful == true && removalSuccessful == true && deleteSuccessful == false)
+                await DisplayAlert("Success", $"FTP connection successful!.\r\nHowever the test file uploaded to the FTP could not be deleted locally from the folder\r\nYou may remove \"FTPTestFile.txt\" manually\r\nUnexpected error:\r\n{ex.Message}", "OK");
+            else
+                await DisplayAlert("Error", $"An unexpected error occurred uploading the test file to FTP. Please check your FTP settings.\r\nUnexpected error:\r\n{ex.Message}", "OK");
         }
         finally
         {

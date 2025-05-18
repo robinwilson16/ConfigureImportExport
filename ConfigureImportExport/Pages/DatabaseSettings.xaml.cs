@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 using System.Diagnostics;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ConfigureImportExport.Pages;
 
@@ -48,6 +49,12 @@ public partial class DatabaseSettings : ContentPage
 
     private async void OnTestButtonClicked(object sender, EventArgs e)
     {
+        //Check fields have values first
+        if (await CheckInputs() == false)
+        {
+            return;
+        }
+
         if (AppSettings != null)
             AppSettings.IsLoading = true;
 
@@ -80,16 +87,19 @@ public partial class DatabaseSettings : ContentPage
         {
             Console.WriteLine($"SQL error: {ex.Message}");
             await DisplayAlert("Error", $"A SQL error occurred. Please check your database settings.\r\nSQL error:\r\n{ex.Message}", "OK");
+            AppSettings.DBConnectionValid = false;
         }
         catch (DbUpdateException ex)
         {
             Console.WriteLine($"Database update error: {ex.Message}");
             await DisplayAlert("Error", $"Failed to update the database. Please try again.\r\nDatabase update error:\r\n{ex.Message}", "OK");
+            AppSettings.DBConnectionValid = false;
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Unexpected error: {ex.Message}");
             await DisplayAlert("Error", $"An unexpected error occurred. Please try again.\r\nUnexpected error:\r\n{ex.Message}", "OK");
+            AppSettings.DBConnectionValid = false;
         }
         finally
         {
@@ -101,6 +111,7 @@ public partial class DatabaseSettings : ContentPage
         {
             await LoadDatabaseObjects();
             await LoadStoredProcedures();
+            await UpdateExportSettingsDatabase();
             DatabaseConnectionValid();
         }
         else
@@ -171,6 +182,10 @@ public partial class DatabaseSettings : ContentPage
             // If upload file set to false then disable controls otherwise enable them
             if (AppSettings.DatabaseConnection.UseWindowsAuth == true)
             {
+                //Clear any values entered
+                AppSettings.DatabaseConnection.Username = string.Empty;
+                AppSettings.DatabaseConnection.Password = string.Empty;
+
                 Username.IsEnabled = false;
                 Password.IsEnabled = false;
             }
@@ -180,6 +195,40 @@ public partial class DatabaseSettings : ContentPage
                 Password.IsEnabled = true;
             }
         }
+    }
+
+    private async Task<bool?> CheckInputs()
+    {
+        //Check fields have values first
+        string? ErrorMessage = "";
+
+        if (AppSettings != null)
+        {
+            if (string.IsNullOrEmpty(AppSettings?.DatabaseConnection?.Server))
+            {
+                ErrorMessage += "Please enter a server name.\r\n";
+            }
+            if (string.IsNullOrEmpty(AppSettings?.DatabaseConnection?.Database))
+            {
+                ErrorMessage += "Please enter a database name.\r\n";
+            }
+            if (string.IsNullOrEmpty(AppSettings?.DatabaseConnection?.Username) && AppSettings?.DatabaseConnection?.UseWindowsAuth != true)
+            {
+                ErrorMessage += "Please enter a username or tick to use Windows Authentication.\r\n";
+            }
+            if (string.IsNullOrEmpty(AppSettings?.DatabaseConnection?.Password) && AppSettings?.DatabaseConnection?.UseWindowsAuth != true)
+            {
+                ErrorMessage += "Please enter a password or tick to use Windows Authentication.\r\n";
+            }
+        }
+
+        if (ErrorMessage.Length > 0)
+        {
+            await DisplayAlert("Error", ErrorMessage, "OK");
+            return false;
+        }
+
+        return true;
     }
 
     private async Task LoadDatabaseObjects()
@@ -237,6 +286,15 @@ public partial class DatabaseSettings : ContentPage
         catch (Exception ex)
         {
             Debug.WriteLine(ex);
+        }
+    }
+
+    private async Task UpdateExportSettingsDatabase()
+    {
+        //Update Export Tab Database Table and Schema if they are empty
+        if (!string.IsNullOrEmpty(AppSettings?.DatabaseConnection?.Database) && string.IsNullOrEmpty(AppSettings?.DatabaseTable?.Database))
+        {
+            AppSettings.DatabaseTable.Database = AppSettings?.DatabaseConnection?.Database;
         }
     }
 

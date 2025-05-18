@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ConfigureImportExport.Pages.FTPSettings"
-             Title="FTP Settings"
-             Shell.NavBarIsVisible="False"
-             xmlns:local="clr-namespace:ConfigureImportExport.Pages">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ConfigureImportExport.Pages.FTPSettings"
+    Title="FTP Settings"
+    Shell.NavBarIsVisible="False"
+    xmlns:local="clr-namespace:ConfigureImportExport.Pages"
+    xmlns:models="clr-namespace:ConfigureImportExport.Models"
+    x:DataType="models:AppSettingsModel">
     <Grid RowDefinitions="*,Auto">
         <ScrollView
             Grid.Row="0">

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ConfigureImportExport.Models
@@ -38,6 +39,22 @@ namespace ConfigureImportExport.Models
                 {
                     _Folder = value;
                     TriggerPropertyChanged(nameof(Folder));
+                }
+            }
+        }
+
+        [JsonIgnore]
+        public string FolderDisplay
+        {
+            get => Folder?.Replace("\\\\", "\\") ?? string.Empty;
+            set
+            {
+                // Store as double backslashes in the model
+                var newValue = value?.Replace("\\", "\\\\");
+                if (Folder != newValue)
+                {
+                    Folder = newValue;
+                    TriggerPropertyChanged(nameof(FolderDisplay));
                 }
             }
         }
